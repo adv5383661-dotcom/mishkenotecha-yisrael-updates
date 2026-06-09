@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.3.2-perfect-20260609_2041",
-  "description": "תיקון קריאה על דף חדש: המוח יטען קודם את הקובץ החדש ולא יקרא עבודה ישנה; עבודות ריקות נחסמות; הכפתורים ברורים יותר; נוסף ארכיון דפים.",
-  "url": "MishkenotechaYisrael_v1.3.2_perfect_20260609_2041.mishupdate",
-  "sha256": "fae15ffb4e541c89aad8eec0f111a3b64b56d39437b808a4d83ac1731130cc04",
-  "size": 35560,
-  "created_at": "2026-06-09 20:41:32"
+  "version": "1.3.3-perfect-20260609_2044",
+  "description": "תיקון סופי: קריאה תמיד על הדף החדש שנבחר או הודבק, חסימת תוצאות ריקות, שמות כפתורים ברורים, ארכיון דפים, והעדפת ערוץ האונליין על קבצי עדכון ישנים.",
+  "url": "MishkenotechaYisrael_v1.3.3_perfect_20260609_2044.mishupdate",
+  "sha256": "459b253e891395346691bcdee331785414b97d15b424bc3115621b3a7f8461a2",
+  "size": 35627,
+  "created_at": "2026-06-09 20:44:07"
 }
