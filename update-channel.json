@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.3.9-fullscreen-labeldownload-20260610_0138",
-  "description": "מסך מלא מקור מול זיהוי, מסך מלא בכלי התיוג, וכפתור גלוי להורדת קובץ התיוג לאחר אישור.",
-  "url": "MishkenotechaYisrael_v1.3.9_fullscreen_labeldownload_20260610_0138.mishupdate",
-  "sha256": "67c8344f70caf1ba43596ef4d97a6a54f4cecb18228e20dda4e7870924208c35",
-  "size": 59418,
-  "created_at": "2026-06-10 01:38:32"
+  "version": "1.3.10-pitchcutter-bigtext-20260610_0234",
+  "description": "חיתוך שורות חכם לכל גודל צילום וסריקה (לפי שורות הדפדפת), הצלת שורות קצרות, כפתור גודל טקסט (רגיל/גדול/ענק) בתפריט תצוגה, טקסט זיהוי בפונט ספרי גדול, והכנת מנגנון העדכונים לעדכוני מוח.",
+  "url": "MishkenotechaYisrael_v1.3.10_20260610_0234.mishupdate",
+  "sha256": "334ff9bd5de20743158710cb4b04e2457ae1908f4c9fe1f83c0eca0123a3c74e",
+  "size": 62096,
+  "created_at": "2026-06-10 02:34:23"
 }
