@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.3.2-archive-20260609_1723",
-  "description": "נוסף ארכיון דפים שזוהו: כפתור ארכיון דפים, חיפוש, ופתיחת עבודות ישנות מתוך התוכנה.",
-  "url": "MishkenotechaYisrael_v1.3.2_archive_20260609_1723.mishupdate",
-  "sha256": "223963b6f23c3aebf1fd1153dc2bf783c4760b87b2b59bb2c891e1f6128c9fa1",
-  "size": 33279,
-  "created_at": "2026-06-09 17:23:16"
+  "version": "1.3.2-perfect-20260609_2041",
+  "description": "תיקון קריאה על דף חדש: המוח יטען קודם את הקובץ החדש ולא יקרא עבודה ישנה; עבודות ריקות נחסמות; הכפתורים ברורים יותר; נוסף ארכיון דפים.",
+  "url": "MishkenotechaYisrael_v1.3.2_perfect_20260609_2041.mishupdate",
+  "sha256": "fae15ffb4e541c89aad8eec0f111a3b64b56d39437b808a4d83ac1731130cc04",
+  "size": 35560,
+  "created_at": "2026-06-09 20:41:32"
 }
