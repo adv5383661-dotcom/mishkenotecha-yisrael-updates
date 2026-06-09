@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.3.2-paste-fix-20260609_1715",
-  "description": "תיקון סופי להדבקת קובץ חדש: התוכנה לא תשתמש שוב בקובץ קודם, וכפתור הדבק קורא את הקובץ ישירות מלוח Windows.",
-  "url": "MishkenotechaYisrael_v1.3.2_paste_fix_20260609_1715.mishupdate",
-  "sha256": "efda41e82f03cfb1af614a1c04ac2dff4a29fc8202c09a5267eda4ae598fd1ee",
-  "size": 31030,
-  "created_at": "2026-06-09 17:15:51"
+  "version": "1.3.2-archive-20260609_1723",
+  "description": "נוסף ארכיון דפים שזוהו: כפתור ארכיון דפים, חיפוש, ופתיחת עבודות ישנות מתוך התוכנה.",
+  "url": "MishkenotechaYisrael_v1.3.2_archive_20260609_1723.mishupdate",
+  "sha256": "223963b6f23c3aebf1fd1153dc2bf783c4760b87b2b59bb2c891e1f6128c9fa1",
+  "size": 33279,
+  "created_at": "2026-06-09 17:23:16"
 }
