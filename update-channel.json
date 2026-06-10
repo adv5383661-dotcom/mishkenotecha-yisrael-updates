@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.4.3-warmth-20260610_0304",
-  "description": "חמימות בתוכנה: ברכת שלום אישית עם תאריך עברי ומימרא יומית מחז\"ל, מונה 'האוצר שלך' (כמה דפים ושורות כבר אושרו), וזר זהב חוגג כשדף מקבל אישור סופי.",
-  "url": "MishkenotechaYisrael_v1.4.3_20260610_0304.mishupdate",
-  "sha256": "f2e72490ff337753a28d5fefcae8aaf5c893eb6e83f8a5beef8c2f626ab2509e",
-  "size": 13084372,
-  "created_at": "2026-06-10 03:04:42"
+  "version": "1.4.4-selftest-20260610_0327",
+  "description": "שקיפות מלאה: התוכנה בודקת את עצמה בהפעלה ומציגה למטה איזה מוח באמת נטען ומה הדיוק שלו. אם המוח חסר — הודעה ברורה במקום שתיקה.",
+  "url": "MishkenotechaYisrael_v1.4.4_20260610_0327.mishupdate",
+  "sha256": "336871eba2cdddaa6af7a812174409ca3b2e2af4575319ff62d9005d62dc39c3",
+  "size": 13085044,
+  "created_at": "2026-06-10 03:27:32"
 }
