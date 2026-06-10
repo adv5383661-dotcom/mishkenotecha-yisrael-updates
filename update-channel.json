@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.6.0-brain-v11-20260610_1613",
-  "description": "מוח חדש v11: לומד את כל הש\"ס (5,773 מונחים חדשים) וקורא כל איכות צילום — טשטוש השתפר פי 2 (2.2% במקום 4.1%), וגם הקריאה הרגילה התחדדה (1.77%). נבדק בשבעה מבחנים עיוורים ועקף את הקודם בכולם.",
-  "url": "MishkenotechaYisrael_v1.6.0_20260610_1613.mishupdate",
-  "sha256": "54b169c67a861bc7e4158a73992cc6579af8fb84912731d3d9d678ae9973d92c",
-  "size": 14111211,
-  "created_at": "2026-06-10 16:13:49"
+  "version": "1.6.1-instant-preview-20260610_1638",
+  "description": "הדף שבחרת מופיע בתצוגת העמוד מיד — עוד לפני הזיהוי. רואים מה נבחר, לוחצים 'קרא את הדף'.",
+  "url": "MishkenotechaYisrael_v1.6.1_20260610_1638.mishupdate",
+  "sha256": "ff9f8d5d4a19eb46a509b444dad2be789b7ae7b36fff9246f2284b5f98bdf11f",
+  "size": 14111430,
+  "created_at": "2026-06-10 16:38:34"
 }
