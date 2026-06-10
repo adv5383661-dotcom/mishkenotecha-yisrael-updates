@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.6.2-autoread-20260610_2157",
-  "description": "תיקון: ברגע שבוחרים דף חדש — הוא מופיע מיד על המסך (כדי לדעת שנבחר הדף הנכון), והקריאה מתחילה אוטומטית בלי צורך ללחוץ על שום כפתור.",
-  "url": "MishkenotechaYisrael_v1.6.2_20260610_2157.mishupdate",
-  "sha256": "d68ace6176c2e73ed39d0465eeff818c115178c81d5c1d88d1c547dd37b7234f",
-  "size": 14111672,
-  "created_at": "2026-06-10 21:57:30"
+  "version": "1.6.3-history-date-20260610_2209",
+  "description": "היסטוריית ההעלאות עברה לכפתור מתקפל (במקום להופיע תמיד), והתאריך מוצג נכון — עברי באותיות (כ״ה בסיוון) לצד הלועזי.",
+  "url": "MishkenotechaYisrael_v1.6.3_20260610_2209.mishupdate",
+  "sha256": "c1f9238128fa82468402003d750b20c6dd0ae53f0d0e9e19c83d1508cf04ea2f",
+  "size": 14115678,
+  "created_at": "2026-06-10 22:09:10"
 }
