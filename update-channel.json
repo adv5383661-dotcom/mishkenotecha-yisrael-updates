@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.7.6-logfix-20260611_1618",
-  "description": "תיקון פנימי: שיתוף היומן עם אלי אוסף עכשיו את יומן הפעילות והשגיאות האמיתי (לאבחון תקלות מרחוק).",
-  "url": "MishkenotechaYisrael_v1.7.6_20260611_1618.mishupdate",
-  "sha256": "bb02b63915f931e6da6311a521045d55019acb74ebba37086e1e01e7438ff56d",
-  "size": 14124727,
-  "created_at": "2026-06-11 16:18:29"
+  "version": "1.7.7-scrollfix-20260611_1626",
+  "description": "תיקון חשוב: התצוגה במסך מלא נתקעה ולא נגללה במסכים קטנים/בהגדלת תצוגה של ווינדוס — עכשיו מסתגלת לכל מסך ונגללת תמיד.",
+  "url": "MishkenotechaYisrael_v1.7.7_20260611_1626.mishupdate",
+  "sha256": "fbb5c9ad49bc107f2597cc21e534ed65d630dc6f6235df24241b1787c1916219",
+  "size": 14125033,
+  "created_at": "2026-06-11 16:26:34"
 }
