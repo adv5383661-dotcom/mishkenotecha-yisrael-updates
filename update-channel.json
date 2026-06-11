@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.7.19-improvescan-20260611_2053",
-  "description": "חדש: כפתור שפר סריקה — חותך ומיישר את הדף מתוך הצילום, מסיר צללים, מלבין רקע ומחדד, לפני הזיהוי. עובד על תמונה או PDF.",
-  "url": "MishkenotechaYisrael_v1.7.19_20260611_2053.mishupdate",
-  "sha256": "aca6de81ff7b21cec9849a3ab98521ec451c41e7b33f46b092c9567703b709cb",
-  "size": 17865736,
-  "created_at": "2026-06-11 20:53:44"
+  "version": "1.7.20-pipelinefix-20260611_2100",
+  "description": "תיקון פנימי חשוב: שיפורי עיבוד התמונה (כולל כפתור שפר סריקה ושיפור אוטומטי) נכנסים עכשיו לתוקף בתוכנה המותקנת. תיקון מנגנון העדכון לתת-החבילות.",
+  "url": "MishkenotechaYisrael_v1.7.20_20260611_2100.mishupdate",
+  "sha256": "852f6c9fa40a3e38f7de1b6c7620f8d75a2f6c20d82450ee3785af109c9dfbc2",
+  "size": 17866275,
+  "created_at": "2026-06-11 21:00:19"
 }
