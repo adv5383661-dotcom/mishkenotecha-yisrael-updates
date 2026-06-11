@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.7.1-chat-fix-20260611_1318",
-  "description": "תיקון: כפתור הצ׳אט 💬 מופיע עכשיו תמיד (גם במסך העבודה המלא). לחיצה פותחת את הצ׳אט עם אלי.",
-  "url": "MishkenotechaYisrael_v1.7.1_20260611_1318.mishupdate",
-  "sha256": "2c71e93a3a86e262928a641f824dfdd4e1a17f6186a07af3e56c7bd9eabaa1df",
-  "size": 14121830,
-  "created_at": "2026-06-11 13:18:20"
+  "version": "1.7.2-bigfiles-20260611_1323",
+  "description": "אפשר לשלוח בצ׳אט קבצים גדולים — עד 50MB (במקום 24MB). תמונות, סרטונים קצרים, הקלטות וקבצים בכל פורמט.",
+  "url": "MishkenotechaYisrael_v1.7.2_20260611_1323.mishupdate",
+  "sha256": "53cd82e1f1b43cae4cc66848e4a132903b0c118f278c6a125d844b553e1901b1",
+  "size": 14121986,
+  "created_at": "2026-06-11 13:23:39"
 }
