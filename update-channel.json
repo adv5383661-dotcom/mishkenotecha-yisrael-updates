@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.7.22-preview-20260611_2111",
-  "description": "תיקון: התצוגה המקדימה של הדף מוצגת עכשיו מיד עם בחירה/הדבקה (לפני הזיהוי), במקום סמל גנרי. היה חסם אבטחה שמנע הצגת התמונה.",
-  "url": "MishkenotechaYisrael_v1.7.22_20260611_2111.mishupdate",
-  "sha256": "d71052f2695e8610110182101defc28caabbfa33f69e90cda52c4232f83e6133",
-  "size": 17871726,
-  "created_at": "2026-06-11 21:11:30"
+  "version": "1.7.23-chatdownload-20260611_2129",
+  "description": "שיפור צ׳אט: לחיצה על קובץ שקיבלת (PDF/מסמך/הקלטה) מורידה אותו לתיקיית ההורדות ופותחת אותו אוטומטית — בלחיצה אחת.",
+  "url": "MishkenotechaYisrael_v1.7.23_20260611_2129.mishupdate",
+  "sha256": "223823b3f791b612f23b5921cac83fe383a3b033cdc0f02f1d56a9e2ceed8f3f",
+  "size": 17872262,
+  "created_at": "2026-06-11 21:29:00"
 }
