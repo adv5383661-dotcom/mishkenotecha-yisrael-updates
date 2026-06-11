@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.7.2-bigfiles-20260611_1323",
-  "description": "אפשר לשלוח בצ׳אט קבצים גדולים — עד 50MB (במקום 24MB). תמונות, סרטונים קצרים, הקלטות וקבצים בכל פורמט.",
-  "url": "MishkenotechaYisrael_v1.7.2_20260611_1323.mishupdate",
-  "sha256": "53cd82e1f1b43cae4cc66848e4a132903b0c118f278c6a125d844b553e1901b1",
-  "size": 14121986,
-  "created_at": "2026-06-11 13:23:39"
+  "version": "1.7.4-chat-telegram-20260611_1336",
+  "description": "צ׳אט בסגנון טלגרם: הגדלה למסך גדול, גרירת פינה לשינוי גודל, בועות מלוטשות, מפרידי תאריך, וקיבוץ הודעות. תוקנו כפילויות הודעות.",
+  "url": "MishkenotechaYisrael_v1.7.4_20260611_1336.mishupdate",
+  "sha256": "02863512a4fc326cd46ee2a5fa0ae0c423cd0461e9b9370ad79a0a2206afc7ec",
+  "size": 14123668,
+  "created_at": "2026-06-11 13:36:22"
 }
