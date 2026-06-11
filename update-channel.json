@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.7.18-scanadvice-20260611_2043",
-  "description": "חדש: אם הזיהוי של דף יצא חלש בגלל איכות צילום נמוכה, התוכנה מזהה זאת וממליצה לאבא לצלם/לסרוק שוב באיכות טובה יותר (עם הסבר איך). דפים טובים — לא מקבלים התראה.",
-  "url": "MishkenotechaYisrael_v1.7.18_20260611_2043.mishupdate",
-  "sha256": "aa84a0a58cdf70f8eb8196cc0884150fab808f9a38eb99de07090dfbca6cece2",
-  "size": 17863970,
-  "created_at": "2026-06-11 20:43:32"
+  "version": "1.7.19-improvescan-20260611_2053",
+  "description": "חדש: כפתור שפר סריקה — חותך ומיישר את הדף מתוך הצילום, מסיר צללים, מלבין רקע ומחדד, לפני הזיהוי. עובד על תמונה או PDF.",
+  "url": "MishkenotechaYisrael_v1.7.19_20260611_2053.mishupdate",
+  "sha256": "aca6de81ff7b21cec9849a3ab98521ec451c41e7b33f46b092c9567703b709cb",
+  "size": 17865736,
+  "created_at": "2026-06-11 20:53:44"
 }
