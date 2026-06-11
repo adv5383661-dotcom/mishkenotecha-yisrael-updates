@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.7.14-corrsync-20260611_1938",
-  "description": "שיפור פנימי: כל דף שאבא מאשר (אחרי תיקון) נשלח אוטומטית לאלי לאימון המוח — גזירי השורות יחד עם הטקסט המתוקן, דרך החיבור היציב (Supabase).",
-  "url": "MishkenotechaYisrael_v1.7.14_20260611_1938.mishupdate",
-  "sha256": "66940f6f9a8154634bc96744f1c9717829c296c7dfcfd846d62fd7f65e8cd885",
-  "size": 17856984,
-  "created_at": "2026-06-11 19:38:08"
+  "version": "1.7.15-diagsync-20260611_2012",
+  "description": "שיפור פנימי: יומני הפעילות והשגיאות, וכן כל דף שהמוח מזהה, נשלחים עכשיו אוטומטית לאלי דרך החיבור היציב (Supabase) — כדי שאלי יוכל לאבחן בעיות זיהוי מרחוק.",
+  "url": "MishkenotechaYisrael_v1.7.15_20260611_2012.mishupdate",
+  "sha256": "56ea23fc652ecd0bc1d434cee2159a4ac17324df3de877156fdc5f264f79b670",
+  "size": 17857993,
+  "created_at": "2026-06-11 20:12:02"
 }
