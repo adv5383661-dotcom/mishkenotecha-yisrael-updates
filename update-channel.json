@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.7.10-chatplus-20260611_1656",
-  "description": "שיפורי צ׳אט: התראה ברורה עם מונה כשיש הודעה חדשה (כולל צליל), הדבקת תמונות ישירות מהלוח (Ctrl+V), וגרירת קבצים. שליחת מסמכים בכל פורמט (כולל שמות בעברית) נבדקה ועובדת.",
-  "url": "MishkenotechaYisrael_v1.7.10_20260611_1656.mishupdate",
-  "sha256": "a3bf81d63e9ba34429ac9e9b3615676b1d242a0a8ffca592f2cc4cb8b99825a2",
-  "size": 17846927,
-  "created_at": "2026-06-11 16:56:05"
+  "version": "1.7.11-collapse-20260611_1703",
+  "description": "רשימת היסטוריית העלאות וזיהויים מקופלת כברירת מחדל ונפתחת בלחיצה על החץ — הסרגל נקי יותר.",
+  "url": "MishkenotechaYisrael_v1.7.11_20260611_1703.mishupdate",
+  "sha256": "9b43b0cee54a56ef8d5dcf8ce1597f80202e8e48406c62cfe187ab91c72665c9",
+  "size": 17846960,
+  "created_at": "2026-06-11 17:03:26"
 }
