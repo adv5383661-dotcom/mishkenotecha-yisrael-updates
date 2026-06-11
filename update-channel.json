@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.7.17-hebdate-20260611_2033",
-  "description": "תיקון: התאריך העברי מוצג עכשיו באותיות גימטריה כנהוג (כ״ו בסיוון תשפ״ו) במקום במספרים.",
-  "url": "MishkenotechaYisrael_v1.7.17_20260611_2033.mishupdate",
-  "sha256": "652ab5fe83142cb5827892c7081c79fd29843476beb8948d737fa29616cdb5ea",
-  "size": 17861663,
-  "created_at": "2026-06-11 20:33:28"
+  "version": "1.7.18-scanadvice-20260611_2043",
+  "description": "חדש: אם הזיהוי של דף יצא חלש בגלל איכות צילום נמוכה, התוכנה מזהה זאת וממליצה לאבא לצלם/לסרוק שוב באיכות טובה יותר (עם הסבר איך). דפים טובים — לא מקבלים התראה.",
+  "url": "MishkenotechaYisrael_v1.7.18_20260611_2043.mishupdate",
+  "sha256": "aa84a0a58cdf70f8eb8196cc0884150fab808f9a38eb99de07090dfbca6cece2",
+  "size": 17863970,
+  "created_at": "2026-06-11 20:43:32"
 }
