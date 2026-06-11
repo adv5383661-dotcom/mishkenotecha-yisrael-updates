@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.7.16-scanenhance-20260611_2028",
-  "description": "שיפור זיהוי: צילומים פשוטים (לא מ-CamScanner) עוברים עכשיו שיפור אוטומטי בסגנון CamScanner — הסרת צללים, הלבנת רקע וחידוד — לפני הזיהוי. מופעל רק במחשב של אבא; סריקות נקיות לא נוגעים בהן.",
-  "url": "MishkenotechaYisrael_v1.7.16_20260611_2028.mishupdate",
-  "sha256": "db6661a3dbc2a062abdce229c2a0c69802d9dac370577c54b46986519ad8f613",
-  "size": 17861341,
-  "created_at": "2026-06-11 20:28:34"
+  "version": "1.7.17-hebdate-20260611_2033",
+  "description": "תיקון: התאריך העברי מוצג עכשיו באותיות גימטריה כנהוג (כ״ו בסיוון תשפ״ו) במקום במספרים.",
+  "url": "MishkenotechaYisrael_v1.7.17_20260611_2033.mishupdate",
+  "sha256": "652ab5fe83142cb5827892c7081c79fd29843476beb8948d737fa29616cdb5ea",
+  "size": 17861663,
+  "created_at": "2026-06-11 20:33:28"
 }
