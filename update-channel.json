@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.7.26-urgent-bigscan-20260611_2238",
-  "description": "תיקון דחוף לסריקות גדולות: דף סרוק ברזולוציה גבוהה נחתך עכשיו נכון (כ-22 שורות אמיתיות במקום 140 שבורות), והעיבוד ירד מדקות ל-3 שניות. גם כפתור ההדבקה הוארך זמן ההמתנה שלו ובוחר הקבצים תוקן.",
-  "url": "MishkenotechaYisrael_v1.7.26_20260611_2238.mishupdate",
-  "sha256": "9acae3547c99f89d71948e2cf35a50d653d33b645657bf6240e5b7623166e2a7",
-  "size": 17874706,
-  "created_at": "2026-06-11 22:38:01"
+  "version": "1.7.29-rollback-chat-20260612_1325",
+  "description": "Rollback to the full stable 1.7.26 chat layer. Fixes the missing supabase_config.json failure from 1.7.27.",
+  "url": "MishkenotechaYisrael_v1.7.29_rollback_chat_20260612_1325.mishupdate",
+  "sha256": "95fdfbc5e15890541b992ed96c3e4a651c1558029e49153e6a45343fa5695ea3",
+  "size": 17874554,
+  "created_at": "2026-06-12 13:24:42"
 }
