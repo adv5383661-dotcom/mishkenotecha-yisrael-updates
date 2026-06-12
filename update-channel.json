@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.7.31-presence-truth-20260612_1337",
-  "description": "Presence fix: no fake last-seen from background or legacy heartbeat. Shows online/last-seen only from real active chat state.",
-  "url": "MishkenotechaYisrael_v1.7.31_presence_truth_20260612_1337.mishupdate",
-  "sha256": "6668f5bc0f2a538d98a835f40f9bf70f672bf3cf92bcc7bfd14d23cde6185133",
+  "version": "1.7.32-merged-brain-chat-20260612_1350",
+  "description": "עדכון מאוחד: המוח החדש v13 (כתב יד עתיק — שיפור 29%, וגם הכתב הרגיל מדויק יותר) + כל שיפורי הצ׳אט והנוכחות.",
+  "url": "MishkenotechaYisrael_v1.7.32_merged_20260612_1350.mishupdate",
+  "sha256": "e348d2a00fbd73e4df1304fa1b1e4d6967f47ebda58be5c61920e29e850d971b",
   "size": 17877612,
   "created_at": "2026-06-12 13:37:45"
 }
