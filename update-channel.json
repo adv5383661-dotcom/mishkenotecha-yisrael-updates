@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.7.30-chat-read-delete-20260612_1332",
-  "description": "Chat read receipts, true active/last-seen presence, and safe delete-for-everyone markers. Full overlay includes chat config fallback.",
-  "url": "MishkenotechaYisrael_v1.7.30_chat_read_delete_20260612_1332.mishupdate",
-  "sha256": "d5ed8d8e759fb2de1c24d0415f4ab02922214a1101bbc8a3a1e786e8bb46a4f5",
+  "version": "1.7.31-brain-v13-makkot-20260612_1336",
+  "description": "מוח חדש v13: קורא כתב יד מתקופה ישנה (מסכת מכות) טוב ב-29% — וגם הכתב הרגיל מדויק יותר. כולל את כל שיפורי הצ׳אט האחרונים.",
+  "url": "MishkenotechaYisrael_v1.7.31_brain_v13_20260612_1336.mishupdate",
+  "sha256": "ec50df15dd849dc2ede65e3f51a9722052210c80dd202ffc69891f3ee3fc343d",
   "size": 17877470,
   "created_at": "2026-06-12 13:32:41"
 }
