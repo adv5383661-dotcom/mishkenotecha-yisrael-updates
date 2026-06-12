@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.7.36-chat-delete-largefiles-20260612_135403",
-  "description": "Chat update: visible delete messages, WhatsApp-style real last-seen text, and large-file chat upload up to 5GB with streamed/TUS upload.",
-  "url": "MishkenotechaYisrael_v1.7.36_chat_delete_largefiles_20260612_135403.mishupdate",
-  "sha256": "ddf5709601b2dbf3710edf50c7cdb0565ba7fadd6540bfbff17348d8a2e012f2",
-  "size": 17876645,
-  "created_at": "2026-06-12 13:55:09"
+  "version": "1.7.37-chat-attach-cancel-largeparts-20260612_140031",
+  "description": "Chat update: cancel a pending attachment before sending; delete messages; send very large files by splitting and rebuilding them automatically.",
+  "url": "MishkenotechaYisrael_v1.7.37_chat_attach_cancel_largeparts_20260612_140031.mishupdate",
+  "sha256": "a930e67accfe2b9f626e2002a39458ccd305db4e1e43b457bb92b81af763b38b",
+  "size": 17877880,
+  "created_at": "2026-06-12 14:00:32"
 }
