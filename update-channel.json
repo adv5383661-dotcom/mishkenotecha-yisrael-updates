@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.7.27-chat-readreceipts-20260612_1313",
-  "description": "צ'אט: וי אחד נשלח, שני וי כשהצד השני קרא; סטטוס מחובר מוצג רק כשהצד השני נמצא בפועל במסך הצ'אט, אחרת נראה לאחרונה.",
-  "url": "MishkenotechaYisrael_v1.7.27_chat_readreceipts_20260612_1313.mishupdate",
-  "sha256": "6c86d08e06cf06acbc270ed3c10946145c3576ad61fefe41cc16b6d4968b969c",
-  "size": 315936,
-  "created_at": "2026-06-12 13:13:48"
+  "version": "1.7.26-urgent-bigscan-20260611_2238",
+  "description": "תיקון דחוף לסריקות גדולות: דף סרוק ברזולוציה גבוהה נחתך עכשיו נכון (כ-22 שורות אמיתיות במקום 140 שבורות), והעיבוד ירד מדקות ל-3 שניות. גם כפתור ההדבקה הוארך זמן ההמתנה שלו ובוחר הקבצים תוקן.",
+  "url": "MishkenotechaYisrael_v1.7.26_20260611_2238.mishupdate",
+  "sha256": "9acae3547c99f89d71948e2cf35a50d653d33b645657bf6240e5b7623166e2a7",
+  "size": 17874706,
+  "created_at": "2026-06-11 22:38:01"
 }
