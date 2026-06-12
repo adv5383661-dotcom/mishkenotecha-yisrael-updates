@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.7.32-merged-brain-chat-20260612_1350",
-  "description": "עדכון מאוחד: המוח החדש v13 (כתב יד עתיק — שיפור 29%, וגם הכתב הרגיל מדויק יותר) + כל שיפורי הצ׳אט והנוכחות.",
-  "url": "MishkenotechaYisrael_v1.7.32_merged_20260612_1350.mishupdate",
-  "sha256": "e348d2a00fbd73e4df1304fa1b1e4d6967f47ebda58be5c61920e29e850d971b",
-  "size": 17877612,
-  "created_at": "2026-06-12 13:37:45"
+  "version": "1.7.36-chat-delete-largefiles-20260612_135403",
+  "description": "Chat update: visible delete messages, WhatsApp-style real last-seen text, and large-file chat upload up to 5GB with streamed/TUS upload.",
+  "url": "MishkenotechaYisrael_v1.7.36_chat_delete_largefiles_20260612_135403.mishupdate",
+  "sha256": "ddf5709601b2dbf3710edf50c7cdb0565ba7fadd6540bfbff17348d8a2e012f2",
+  "size": 17876645,
+  "created_at": "2026-06-12 13:55:09"
 }
