@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.7.31-brain-v13-makkot-20260612_1336",
-  "description": "מוח חדש v13: קורא כתב יד מתקופה ישנה (מסכת מכות) טוב ב-29% — וגם הכתב הרגיל מדויק יותר. כולל את כל שיפורי הצ׳אט האחרונים.",
-  "url": "MishkenotechaYisrael_v1.7.31_brain_v13_20260612_1336.mishupdate",
-  "sha256": "ec50df15dd849dc2ede65e3f51a9722052210c80dd202ffc69891f3ee3fc343d",
-  "size": 17877470,
-  "created_at": "2026-06-12 13:32:41"
+  "version": "1.7.31-presence-truth-20260612_1337",
+  "description": "Presence fix: no fake last-seen from background or legacy heartbeat. Shows online/last-seen only from real active chat state.",
+  "url": "MishkenotechaYisrael_v1.7.31_presence_truth_20260612_1337.mishupdate",
+  "sha256": "6668f5bc0f2a538d98a835f40f9bf70f672bf3cf92bcc7bfd14d23cde6185133",
+  "size": 17877612,
+  "created_at": "2026-06-12 13:37:45"
 }
