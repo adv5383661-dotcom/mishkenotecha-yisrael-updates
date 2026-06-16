@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.7.39-abba-brain-v15-makkot-20260616_164028",
-  "description": "מוח חדש v15 (מכות): כתב ישן 11.45%→9.73%, רגיל 1.71%→1.41%. כולל מחדש את כל הצ׳אט והעיצוב — מתקן את 1.7.38.",
-  "url": "MishkenotechaYisrael_v1.7.39_abba_brain_v15_20260616_164028.mishupdate",
-  "sha256": "2ea0cf867594f699f312c3a36fd5638683c5a8f248a3f4fd1a66cc923756d4d5",
-  "size": 17869001,
-  "created_at": "2026-06-16 16:40:51"
+  "version": "1.7.40-brain-name-20260616_164844",
+  "description": "המוח נקרא עכשיו \"מוח משכנותיך ישראל\" במקום v6 בכל מקום. כולל את המוח החדש (v15) וכל הצ׳אט/העיצוב.",
+  "url": "MishkenotechaYisrael_v1.7.40_brain_name_20260616_164844.mishupdate",
+  "sha256": "6120584f9c1f5f9417f1086efaef80a5a092b9765a02e6d41992cef0a1bed4bc",
+  "size": 17868786,
+  "created_at": "2026-06-16 16:49:02"
 }
