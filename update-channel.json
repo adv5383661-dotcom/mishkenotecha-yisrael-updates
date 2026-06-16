@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.7.37-chat-attach-cancel-largeparts-20260612_140031",
-  "description": "Chat update: cancel a pending attachment before sending; delete messages; send very large files by splitting and rebuilding them automatically.",
-  "url": "MishkenotechaYisrael_v1.7.37_chat_attach_cancel_largeparts_20260612_140031.mishupdate",
-  "sha256": "a930e67accfe2b9f626e2002a39458ccd305db4e1e43b457bb92b81af763b38b",
-  "size": 17877880,
-  "created_at": "2026-06-12 14:00:32"
+  "version": "1.7.38-abba-brain-v15-makkot-20260616_163600",
+  "description": "מוח חדש v15: אומן על הדפים שאבא תיקן (מכות). קורא כתב יד ישן טוב יותר (11.45%→9.73% טעויות) וגם כתב רגיל מדויק יותר (1.71%→1.41%). אין שינוי אחר בתוכנה.",
+  "url": "MishkenotechaYisrael_v1.7.38_abba_brain_v15_20260616_163600.mishupdate",
+  "sha256": "df451e9ca50f58011dbda9e6f1a75b73603dc8fa8256d9b7cb558263e93ce40d",
+  "size": 13765726,
+  "created_at": "2026-06-16 16:37:23"
 }
