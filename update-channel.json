@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.7.40-brain-name-20260616_164844",
-  "description": "המוח נקרא עכשיו \"מוח משכנותיך ישראל\" במקום v6 בכל מקום. כולל את המוח החדש (v15) וכל הצ׳אט/העיצוב.",
-  "url": "MishkenotechaYisrael_v1.7.40_brain_name_20260616_164844.mishupdate",
-  "sha256": "6120584f9c1f5f9417f1086efaef80a5a092b9765a02e6d41992cef0a1bed4bc",
-  "size": 17868786,
-  "created_at": "2026-06-16 16:49:02"
+  "version": "1.7.41-archive-and-chat-20260616_2247",
+  "description": "שני תיקונים: (1) כשפותחים דף שמור מהארכיון, הזיהוי (מה שהמוח קרא) מוצג שוב ליד הצילום. (2) בצ׳אט — 'נראה לאחרונה' מתעדכן כמו שצריך, ומופיעות שתי וי (✓✓) כשהצד השני קורא את ההודעה.",
+  "url": "MishkenotechaYisrael_v1.7.41_20260616_2247.mishupdate",
+  "sha256": "26d09c2946f5737dc335d2e9d8e55094ebbbd277a140ab32f5aa97996fd073f7",
+  "size": 30603934,
+  "created_at": "2026-06-16 22:47:05"
 }
