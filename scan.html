@@ -136,15 +136,25 @@ let warpedCanvas = null;       // perspective-corrected color result
 
 // ---------- boot ----------
 (async function boot(){
-  try{
-    cv = await (window.cv instanceof Promise ? window.cv : window.cv);
-    if(cv && cv.then) cv = await cv;
-  }catch(e){ cv = window.cv; }
-  // @techstark build exposes a ready promise
-  if(window.cv && !window.cv.Mat){ try{ await new Promise(r=>{ window.cv.onRuntimeInitialized=r; }); }catch(e){} }
-  cv = window.cv;
+  // start the camera immediately so the user sees the viewfinder even while
+  // the (large) OpenCV module is still downloading.
   await startCamera();
+  let c = window.cv;
+  try{
+    if(c && typeof c.then === "function") c = await c;        // @techstark: promise -> ready module
+    else if(c && !c.Mat){ await new Promise(res=>{ c.onRuntimeInitialized = res; }); }
+  }catch(e){}
+  // last-resort: poll until Mat is really available (max ~20s)
+  for(let i=0; i<200 && (!c || !c.Mat); i++){
+    await new Promise(r=>setTimeout(r,100));
+    if(window.cv && typeof window.cv.then !== "function" && window.cv.Mat) c = window.cv;
+  }
+  cv = c;
   $("loading").style.display="none";
+  if(!cv || !cv.Mat){
+    toast("הסורק לא נטען עד הסוף — משוך את הדף מטה כדי לרענן", 6000);
+    return;   // camera still works for a manual photo; edge-detect/crop need cv
+  }
   liveDetectLoop();
 })();
 
