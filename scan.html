@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>סורק משכנותיך</title>
+<style>
+  :root{ --green:#1D9E75; --bg:#000; }
+  *{ box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+  html,body{ margin:0; height:100%; background:var(--bg); color:#fff;
+    font-family:-apple-system,"Segoe UI",Arial,sans-serif; overflow:hidden; }
+  #app{ position:fixed; inset:0; display:flex; flex-direction:column; }
+  .stage{ position:absolute; inset:0; display:none; }
+  .stage.on{ display:flex; flex-direction:column; }
+
+  video,canvas,img{ display:block; }
+  #cam{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; background:#111; }
+  #overlay{ position:absolute; inset:0; width:100%; height:100%; pointer-events:none; }
+
+  .topbar{ position:absolute; top:0; left:0; right:0; padding:14px 16px;
+    padding-top:calc(14px + env(safe-area-inset-top));
+    background:linear-gradient(#000a,#0000); font-size:15px; z-index:5; text-align:center; }
+  .hint{ position:absolute; top:60px; left:0; right:0; text-align:center;
+    font-size:14px; color:#fff; text-shadow:0 1px 3px #000; z-index:5; }
+
+  .controls{ position:absolute; left:0; right:0; bottom:0; z-index:6;
+    padding:16px 16px calc(20px + env(safe-area-inset-bottom));
+    display:flex; align-items:center; justify-content:space-between; gap:12px;
+    background:linear-gradient(#0000,#000c); }
+  .shutter{ width:74px; height:74px; border-radius:50%; background:#fff;
+    border:5px solid #ffffff66; flex:0 0 auto; }
+  .shutter:active{ transform:scale(.94); }
+  .sidebtn{ flex:0 0 64px; background:none; border:none; color:#fff; font-size:13px; }
+  .sidebtn i{ font-size:26px; display:block; margin-bottom:3px; }
+
+  .filters{ position:absolute; left:0; right:0; bottom:120px; z-index:6;
+    display:flex; gap:8px; overflow-x:auto; padding:8px 16px; }
+  .chip{ flex:0 0 auto; padding:8px 14px; border-radius:20px; font-size:14px;
+    background:#ffffff22; color:#fff; border:1.5px solid transparent; }
+  .chip.sel{ background:#fff; color:#000; border-color:#fff; }
+
+  #cropCanvas{ position:absolute; inset:0; width:100%; height:100%; touch-action:none; }
+  .handle{ position:absolute; width:30px; height:30px; margin:-15px 0 0 -15px;
+    border-radius:50%; background:#1D9E7588; border:2px solid #fff; z-index:7; touch-action:none; }
+
+  #preview{ position:absolute; top:70px; bottom:200px; left:12px; right:12px;
+    width:auto; height:auto; max-width:calc(100% - 24px); object-fit:contain; margin:auto; }
+
+  .bigbtn{ width:100%; padding:16px; border-radius:14px; border:none;
+    font-size:17px; font-weight:600; }
+  .primary{ background:var(--green); color:#fff; }
+  .ghost{ background:#ffffff1a; color:#fff; }
+
+  #loading{ position:absolute; inset:0; display:flex; align-items:center;
+    justify-content:center; flex-direction:column; gap:14px; background:#000; z-index:50; }
+  .spin{ width:42px; height:42px; border:4px solid #ffffff33; border-top-color:var(--green);
+    border-radius:50%; animation:sp 1s linear infinite; }
+  @keyframes sp{ to{ transform:rotate(360deg); } }
+  .toast{ position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+    background:#000c; padding:14px 22px; border-radius:12px; font-size:15px; z-index:40; }
+</style>
+</head>
+<body>
+<div id="app">
+
+  <div id="loading"><div class="spin"></div><div>טוען את הסורק…</div></div>
+
+  <!-- STAGE 1: live camera -->
+  <div id="stageCam" class="stage on">
+    <video id="cam" playsinline muted autoplay></video>
+    <canvas id="overlay"></canvas>
+    <div class="topbar">צלם את הדף — מלא בו את המסך</div>
+    <div id="hint" class="hint"></div>
+    <div class="controls">
+      <button class="sidebtn" id="galleryBtn"><i class="ti ti-photo"></i>מהגלריה</button>
+      <button class="shutter" id="shutterBtn" aria-label="צלם"></button>
+      <button class="sidebtn" id="torchBtn"><i class="ti ti-bulb"></i>פנס</button>
+    </div>
+    <input id="fileInput" type="file" accept="image/*" capture="environment" style="display:none">
+  </div>
+
+  <!-- STAGE 2: adjust corners -->
+  <div id="stageCrop" class="stage">
+    <canvas id="cropCanvas"></canvas>
+    <div class="topbar">גרור את הפינות שיתאימו בדיוק לדף</div>
+    <div class="controls" style="gap:10px;">
+      <button class="bigbtn ghost" id="cropBack" style="flex:1;">צלם שוב</button>
+      <button class="bigbtn primary" id="cropOk" style="flex:1;">חיתוך ויישור</button>
+    </div>
+  </div>
+
+  <!-- STAGE 3: filter + send -->
+  <div id="stageResult" class="stage">
+    <img id="preview" alt="תצוגה מקדימה">
+    <div class="topbar">בחר עיבוד ושלח לתוכנה</div>
+    <div class="filters" id="filters">
+      <button class="chip sel" data-f="enhance">מסמך צבעוני</button>
+      <button class="chip" data-f="bw">שחור-לבן חד</button>
+      <button class="chip" data-f="gray">אפור מוגבר</button>
+      <button class="chip" data-f="original">מקורי</button>
+    </div>
+    <div class="controls" style="gap:10px;">
+      <button class="bigbtn ghost" id="resBack" style="flex:1;">חזרה</button>
+      <button class="bigbtn primary" id="sendBtn" style="flex:1;">שלח לתוכנה</button>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" style="display:none"></div>
+</div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/2.47.0/tabler-icons.min.css">
+<script src="https://cdn.jsdelivr.net/npm/@techstark/opencv-js@4.9.0-release.3/dist/opencv.js"></script>
+<script>
+// ---------- config (browser-grade publishable key — same one the app's chat uses) ----------
+const SUPA = {
+  url: "https://atmwwpdlfnphmcycintg.supabase.co",
+  key: "sb_publishable_EkhrIF35btZNIO3YEI-uPA_YLIfP-I-",
+  bucket: "mishk-chat",
+  who: "abba"            // uploads land in inbox/abba/ — the desktop app watches this
+};
+
+let cv = null;                 // opencv module (resolves async)
+let stream = null, track = null, torchOn = false;
+const $ = id => document.getElementById(id);
+const stages = { cam:$("stageCam"), crop:$("stageCrop"), result:$("stageResult") };
+function show(name){ for(const k in stages) stages[k].classList.toggle("on", k===name); }
+function toast(msg, ms){ const t=$("toast"); t.textContent=msg; t.style.display="block";
+  if(ms){ clearTimeout(t._h); t._h=setTimeout(()=>t.style.display="none", ms); } }
+
+// captured full-resolution still + working state
+let captured = null;           // {canvas, w, h}
+let corners = null;            // [{x,y}*4] in cropCanvas display coords
+let warpedCanvas = null;       // perspective-corrected color result
+
+// ---------- boot ----------
+(async function boot(){
+  try{
+    cv = await (window.cv instanceof Promise ? window.cv : window.cv);
+    if(cv && cv.then) cv = await cv;
+  }catch(e){ cv = window.cv; }
+  // @techstark build exposes a ready promise
+  if(window.cv && !window.cv.Mat){ try{ await new Promise(r=>{ window.cv.onRuntimeInitialized=r; }); }catch(e){} }
+  cv = window.cv;
+  await startCamera();
+  $("loading").style.display="none";
+  liveDetectLoop();
+})();
+
+async function startCamera(){
+  try{
+    stream = await navigator.mediaDevices.getUserMedia({
+      video:{ facingMode:{ ideal:"environment" }, width:{ ideal:2560 }, height:{ ideal:1440 } },
+      audio:false });
+    const v=$("cam"); v.srcObject=stream; await v.play();
+    track = stream.getVideoTracks()[0];
+    const caps = track.getCapabilities ? track.getCapabilities() : {};
+    if(!caps.torch) $("torchBtn").style.display="none";
+  }catch(e){
+    toast("אין גישה למצלמה — אפשר לבחור תמונה מהגלריה");
+    $("torchBtn").style.display="none";
+  }
+}
+
+// ---------- live edge hint (lightweight, downscaled) ----------
+let liveBusy=false;
+function liveDetectLoop(){
+  const v=$("cam"), ov=$("overlay");
+  function tick(){
+    if(stages.cam.classList.contains("on") && v.videoWidth && cv && cv.Mat && !liveBusy){
+      liveBusy=true;
+      try{
+        ov.width=v.clientWidth; ov.height=v.clientHeight;
+        const quad = detectQuadFromVideo(v, 320);
+        const ctx=ov.getContext("2d"); ctx.clearRect(0,0,ov.width,ov.height);
+        if(quad){
+          const sx=ov.width/320, sy=ov.height/(320*v.videoHeight/v.videoWidth);
+          ctx.strokeStyle="#1D9E75"; ctx.lineWidth=3; ctx.fillStyle="#1D9E7522";
+          ctx.beginPath();
+          quad.forEach((p,i)=>{ const x=p.x*sx, y=p.y*sy; i?ctx.lineTo(x,y):ctx.moveTo(x,y); });
+          ctx.closePath(); ctx.fill(); ctx.stroke();
+          $("hint").textContent="זוהה דף ✓";
+        } else { $("hint").textContent=""; }
+      }catch(e){}
+      liveBusy=false;
+    }
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
+
+// detect on a downscaled copy; returns 4 points in the scaled space or null
+function detectQuadFromVideo(video, targetW){
+  const ratio = targetW/video.videoWidth;
+  const w=targetW, h=Math.round(video.videoHeight*ratio);
+  const c=document.createElement("canvas"); c.width=w; c.height=h;
+  c.getContext("2d").drawImage(video,0,0,w,h);
+  return detectQuadFromCanvas(c);
+}
+
+function detectQuadFromCanvas(canvas){
+  let src=cv.imread(canvas), gray=new cv.Mat(), blur=new cv.Mat(), edge=new cv.Mat();
+  let best=null;
+  try{
+    cv.cvtColor(src,gray,cv.COLOR_RGBA2GRAY);
+    cv.GaussianBlur(gray,blur,new cv.Size(5,5),0);
+    cv.Canny(blur,edge,60,180);
+    let k=cv.getStructuringElement(cv.MORPH_RECT,new cv.Size(5,5));
+    cv.dilate(edge,edge,k); k.delete();
+    let contours=new cv.MatVector(), hier=new cv.Mat();
+    cv.findContours(edge,contours,hier,cv.RETR_LIST,cv.CHAIN_APPROX_SIMPLE);
+    const area0=canvas.width*canvas.height; let bestArea=area0*0.15;
+    for(let i=0;i<contours.size();i++){
+      const cnt=contours.get(i); const peri=cv.arcLength(cnt,true);
+      const approx=new cv.Mat(); cv.approxPolyDP(cnt,approx,0.02*peri,true);
+      const a=Math.abs(cv.contourArea(approx));
+      if(approx.rows===4 && a>bestArea && cv.isContourConvex(approx)){
+        bestArea=a; const pts=[];
+        for(let j=0;j<4;j++) pts.push({x:approx.data32S[j*2], y:approx.data32S[j*2+1]});
+        best=orderCorners(pts);
+      }
+      approx.delete(); cnt.delete();
+    }
+    contours.delete(); hier.delete();
+  }catch(e){} finally{ src.delete(); gray.delete(); blur.delete(); edge.delete(); }
+  return best;
+}
+
+function orderCorners(pts){
+  const s=pts.map(p=>p.x+p.y), d=pts.map(p=>p.x-p.y);
+  return [
+    pts[s.indexOf(Math.min(...s))], // tl
+    pts[d.indexOf(Math.max(...d))], // tr
+    pts[s.indexOf(Math.max(...s))], // br
+    pts[d.indexOf(Math.min(...d))], // bl
+  ];
+}
+
+// ---------- capture ----------
+$("shutterBtn").onclick=()=>{
+  const v=$("cam");
+  if(!v.videoWidth){ toast("המצלמה עוד לא מוכנה",1500); return; }
+  const c=document.createElement("canvas"); c.width=v.videoWidth; c.height=v.videoHeight;
+  c.getContext("2d").drawImage(v,0,0);
+  captured={canvas:c, w:c.width, h:c.height};
+  enterCrop();
+};
+$("galleryBtn").onclick=()=>$("fileInput").click();
+$("fileInput").onchange=e=>{
+  const f=e.target.files[0]; if(!f) return;
+  const img=new Image(); img.onload=()=>{
+    const c=document.createElement("canvas"); c.width=img.naturalWidth; c.height=img.naturalHeight;
+    c.getContext("2d").drawImage(img,0,0);
+    captured={canvas:c,w:c.width,h:c.height}; enterCrop();
+  }; img.src=URL.createObjectURL(f);
+};
+$("torchBtn").onclick=async()=>{
+  if(!track) return;
+  try{ torchOn=!torchOn; await track.applyConstraints({advanced:[{torch:torchOn}]}); }catch(e){}
+};
+
+// ---------- crop stage with draggable handles ----------
+let cropFit=null; // {scale, offx, offy, dispW, dispH}
+function enterCrop(){
+  show("crop");
+  const cc=$("cropCanvas"), W=cc.clientWidth, H=cc.clientHeight;
+  cc.width=W; cc.height=H;
+  // fit captured into the canvas (contain)
+  const scale=Math.min(W/captured.w, H/captured.h);
+  const dispW=captured.w*scale, dispH=captured.h*scale;
+  const offx=(W-dispW)/2, offy=(H-dispH)/2;
+  cropFit={scale,offx,offy,dispW,dispH};
+  // auto-detect quad on full capture, else default inset box
+  let quad=null;
+  try{ quad=detectQuadFromCanvas(captured.canvas); }catch(e){}
+  if(quad){ corners=quad.map(p=>({x:offx+p.x*scale, y:offy+p.y*scale})); }
+  else {
+    const m=0.12;
+    corners=[{x:offx+dispW*m,y:offy+dispH*m},{x:offx+dispW*(1-m),y:offy+dispH*m},
+             {x:offx+dispW*(1-m),y:offy+dispH*(1-m)},{x:offx+dispW*m,y:offy+dispH*(1-m)}];
+  }
+  document.querySelectorAll(".handle").forEach(h=>h.remove());
+  corners.forEach((p,i)=>{
+    const h=document.createElement("div"); h.className="handle"; h.dataset.i=i;
+    stages.crop.appendChild(h); makeDraggable(h,i);
+  });
+  drawCrop();
+}
+function drawCrop(){
+  const cc=$("cropCanvas"), ctx=cc.getContext("2d");
+  ctx.clearRect(0,0,cc.width,cc.height);
+  ctx.drawImage(captured.canvas, cropFit.offx, cropFit.offy, cropFit.dispW, cropFit.dispH);
+  ctx.strokeStyle="#1D9E75"; ctx.lineWidth=2; ctx.fillStyle="#1D9E7522";
+  ctx.beginPath(); corners.forEach((p,i)=> i?ctx.lineTo(p.x,p.y):ctx.moveTo(p.x,p.y));
+  ctx.closePath(); ctx.fill(); ctx.stroke();
+  corners.forEach((p,i)=>{ const h=stages.crop.querySelector('.handle[data-i="'+i+'"]');
+    if(h){ h.style.left=p.x+"px"; h.style.top=p.y+"px"; } });
+}
+function makeDraggable(h,i){
+  const move=e=>{ e.preventDefault(); const t=e.touches?e.touches[0]:e;
+    const r=$("cropCanvas").getBoundingClientRect();
+    corners[i]={x:Math.max(0,Math.min(r.width,t.clientX-r.left)),
+                y:Math.max(0,Math.min(r.height,t.clientY-r.top))}; drawCrop(); };
+  const up=()=>{ document.removeEventListener("touchmove",move); document.removeEventListener("mousemove",move);
+    document.removeEventListener("touchend",up); document.removeEventListener("mouseup",up); };
+  const down=e=>{ e.preventDefault(); document.addEventListener("touchmove",move,{passive:false});
+    document.addEventListener("mousemove",move); document.addEventListener("touchend",up);
+    document.addEventListener("mouseup",up); };
+  h.addEventListener("touchstart",down,{passive:false}); h.addEventListener("mousedown",down);
+}
+$("cropBack").onclick=()=>{ show("cam"); };
+$("cropOk").onclick=()=>{ warpPerspective(); enterResult(); };
+
+// map display corners back to source pixels, warp to a flat rectangle
+function warpPerspective(){
+  const src=corners.map(p=>({x:(p.x-cropFit.offx)/cropFit.scale, y:(p.y-cropFit.offy)/cropFit.scale}));
+  const [tl,tr,br,bl]=src;
+  const wA=Math.hypot(br.x-bl.x,br.y-bl.y), wB=Math.hypot(tr.x-tl.x,tr.y-tl.y);
+  const hA=Math.hypot(tr.x-br.x,tr.y-br.y), hB=Math.hypot(tl.x-bl.x,tl.y-bl.y);
+  const W=Math.max(1,Math.round(Math.max(wA,wB))), H=Math.max(1,Math.round(Math.max(hA,hB)));
+  let m=cv.imread(captured.canvas);
+  let srcTri=cv.matFromArray(4,1,cv.CV_32FC2,[tl.x,tl.y,tr.x,tr.y,br.x,br.y,bl.x,bl.y]);
+  let dstTri=cv.matFromArray(4,1,cv.CV_32FC2,[0,0,W,0,W,H,0,H]);
+  let M=cv.getPerspectiveTransform(srcTri,dstTri), out=new cv.Mat();
+  cv.warpPerspective(m,out,M,new cv.Size(W,H),cv.INTER_LINEAR,cv.BORDER_REPLICATE);
+  warpedCanvas=document.createElement("canvas"); cv.imshow(warpedCanvas,out);
+  m.delete(); srcTri.delete(); dstTri.delete(); M.delete(); out.delete();
+}
+
+// ---------- filters ----------
+let currentFilter="enhance";
+function applyFilter(name){
+  let src=cv.imread(warpedCanvas), dst=new cv.Mat();
+  try{
+    if(name==="original"){ src.copyTo(dst); }
+    else if(name==="bw"){
+      cv.cvtColor(src,dst,cv.COLOR_RGBA2GRAY);
+      cv.adaptiveThreshold(dst,dst,255,cv.ADAPTIVE_THRESH_GAUSSIAN_C,cv.THRESH_BINARY,21,12);
+      cv.cvtColor(dst,dst,cv.COLOR_GRAY2RGBA);
+    }
+    else if(name==="gray"){
+      cv.cvtColor(src,dst,cv.COLOR_RGBA2GRAY);
+      let clahe=new cv.CLAHE(2.5,new cv.Size(8,8)); clahe.apply(dst,dst); clahe.delete();
+      cv.cvtColor(dst,dst,cv.COLOR_GRAY2RGBA);
+    }
+    else { // enhance: shadow-flatten + contrast/saturation boost (CamScanner "color document")
+      let rgb=new cv.Mat(); cv.cvtColor(src,rgb,cv.COLOR_RGBA2RGB);
+      let lab=new cv.Mat(); cv.cvtColor(rgb,lab,cv.COLOR_RGB2Lab);
+      let ch=new cv.MatVector(); cv.split(lab,ch);
+      let L=ch.get(0); let clahe=new cv.CLAHE(2.0,new cv.Size(8,8)); clahe.apply(L,L); clahe.delete();
+      let vec=new cv.MatVector(); vec.push_back(L); vec.push_back(ch.get(1)); vec.push_back(ch.get(2));
+      cv.merge(vec,lab); cv.cvtColor(lab,rgb,cv.COLOR_Lab2RGB);
+      cv.convertScaleAbs(rgb,rgb,1.15,8);
+      cv.cvtColor(rgb,dst,cv.COLOR_RGB2RGBA);
+      rgb.delete(); lab.delete(); ch.delete(); vec.delete();
+    }
+    const outC=document.createElement("canvas"); cv.imshow(outC,dst);
+    $("preview").src=outC.toDataURL("image/jpeg",0.92);
+  }catch(e){ toast("שגיאת עיבוד",1500); }
+  finally{ src.delete(); dst.delete(); }
+}
+function enterResult(){ show("result"); currentFilter="enhance";
+  document.querySelectorAll(".chip").forEach(c=>c.classList.toggle("sel",c.dataset.f==="enhance"));
+  applyFilter("enhance"); }
+$("filters").addEventListener("click",e=>{ const b=e.target.closest(".chip"); if(!b) return;
+  document.querySelectorAll(".chip").forEach(c=>c.classList.remove("sel")); b.classList.add("sel");
+  currentFilter=b.dataset.f; applyFilter(currentFilter); });
+$("resBack").onclick=()=>enterCrop();
+
+// ---------- send to software (upload to Supabase inbox) ----------
+$("sendBtn").onclick=async()=>{
+  const dataUrl=$("preview").src;
+  if(!dataUrl.startsWith("data:")){ toast("אין תמונה",1500); return; }
+  toast("שולח לתוכנה…");
+  try{
+    const blob=await (await fetch(dataUrl)).blob();
+    const ts=new Date().toISOString().replace(/[:.]/g,"-");
+    const obj=`inbox/${SUPA.who}/${ts}_${currentFilter}.jpg`;
+    const res=await fetch(`${SUPA.url}/storage/v1/object/${SUPA.bucket}/${encodeURIComponent(obj)}`,{
+      method:"POST",
+      headers:{ apikey:SUPA.key, Authorization:`Bearer ${SUPA.key}`,
+                "Content-Type":"image/jpeg","x-upsert":"true" },
+      body:blob });
+    if(!res.ok) throw new Error(await res.text());
+    toast("✓ נשלח! מופיע בתוכנה בעוד רגע",2500);
+    setTimeout(()=>{ show("cam"); },1200);
+  }catch(e){ toast("שגיאת שליחה: "+(e.message||e).slice(0,60),3000); }
+};
+</script>
+</body>
+</html>
