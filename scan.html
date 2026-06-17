@@ -7,23 +7,19 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <title>סורק משכנותיך</title>
 <style>
-  :root{ --green:#1D9E75; --bg:#000; }
+  :root{ --green:#1D9E75; }
   *{ box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
-  html,body{ margin:0; height:100%; background:var(--bg); color:#fff;
+  html,body{ margin:0; height:100%; background:#000; color:#fff;
     font-family:-apple-system,"Segoe UI",Arial,sans-serif; overflow:hidden; }
-  #app{ position:fixed; inset:0; display:flex; flex-direction:column; }
+  #app{ position:fixed; inset:0; }
   .stage{ position:absolute; inset:0; display:none; }
-  .stage.on{ display:flex; flex-direction:column; }
+  .stage.on{ display:block; }
 
-  video,canvas,img{ display:block; }
   #cam{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; background:#111; }
-  #overlay{ position:absolute; inset:0; width:100%; height:100%; pointer-events:none; }
 
   .topbar{ position:absolute; top:0; left:0; right:0; padding:14px 16px;
     padding-top:calc(14px + env(safe-area-inset-top));
     background:linear-gradient(#000a,#0000); font-size:15px; z-index:5; text-align:center; }
-  .hint{ position:absolute; top:60px; left:0; right:0; text-align:center;
-    font-size:14px; color:#fff; text-shadow:0 1px 3px #000; z-index:5; }
 
   .controls{ position:absolute; left:0; right:0; bottom:0; z-index:6;
     padding:16px 16px calc(20px + env(safe-area-inset-bottom));
@@ -35,44 +31,40 @@
   .sidebtn{ flex:0 0 64px; background:none; border:none; color:#fff; font-size:13px; }
   .sidebtn i{ font-size:26px; display:block; margin-bottom:3px; }
 
-  .filters{ position:absolute; left:0; right:0; bottom:120px; z-index:6;
-    display:flex; gap:8px; overflow-x:auto; padding:8px 16px; }
-  .chip{ flex:0 0 auto; padding:8px 14px; border-radius:20px; font-size:14px;
-    background:#ffffff22; color:#fff; border:1.5px solid transparent; }
-  .chip.sel{ background:#fff; color:#000; border-color:#fff; }
-
   #cropCanvas{ position:absolute; inset:0; width:100%; height:100%; touch-action:none; }
-  .handle{ position:absolute; width:30px; height:30px; margin:-15px 0 0 -15px;
+  .handle{ position:absolute; width:32px; height:32px; margin:-16px 0 0 -16px;
     border-radius:50%; background:#1D9E7588; border:2px solid #fff; z-index:7; touch-action:none; }
 
-  #preview{ position:absolute; top:70px; bottom:200px; left:12px; right:12px;
+  #preview{ position:absolute; top:64px; bottom:196px; left:12px; right:12px;
     width:auto; height:auto; max-width:calc(100% - 24px); object-fit:contain; margin:auto; }
 
-  .bigbtn{ width:100%; padding:16px; border-radius:14px; border:none;
-    font-size:17px; font-weight:600; }
+  .filters{ position:absolute; left:0; right:0; bottom:118px; z-index:6;
+    display:flex; gap:8px; overflow-x:auto; padding:8px 16px; }
+  .chip{ flex:0 0 auto; padding:8px 14px; border-radius:20px; font-size:14px;
+    background:#ffffff22; color:#fff; border:1.5px solid transparent; white-space:nowrap; }
+  .chip.sel{ background:#fff; color:#000; }
+
+  .bigbtn{ padding:16px; border-radius:14px; border:none; font-size:17px; font-weight:600; }
   .primary{ background:var(--green); color:#fff; }
   .ghost{ background:#ffffff1a; color:#fff; }
 
-  #loading{ position:absolute; inset:0; display:flex; align-items:center;
-    justify-content:center; flex-direction:column; gap:14px; background:#000; z-index:50; }
+  #loading{ position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
+    flex-direction:column; gap:14px; background:#000; z-index:50; }
   .spin{ width:42px; height:42px; border:4px solid #ffffff33; border-top-color:var(--green);
     border-radius:50%; animation:sp 1s linear infinite; }
   @keyframes sp{ to{ transform:rotate(360deg); } }
   .toast{ position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
-    background:#000c; padding:14px 22px; border-radius:12px; font-size:15px; z-index:40; }
+    background:#000d; padding:14px 22px; border-radius:12px; font-size:15px; z-index:40; max-width:80%; text-align:center; }
 </style>
 </head>
 <body>
 <div id="app">
+  <div id="loading"><div class="spin"></div><div>פותח את המצלמה…</div></div>
 
-  <div id="loading"><div class="spin"></div><div>טוען את הסורק…</div></div>
-
-  <!-- STAGE 1: live camera -->
+  <!-- STAGE 1: camera -->
   <div id="stageCam" class="stage on">
     <video id="cam" playsinline muted autoplay></video>
-    <canvas id="overlay"></canvas>
-    <div class="topbar">צלם את הדף — מלא בו את המסך</div>
-    <div id="hint" class="hint"></div>
+    <div class="topbar">צלם את הדף — שימלא את המסך</div>
     <div class="controls">
       <button class="sidebtn" id="galleryBtn"><i class="ti ti-photo"></i>מהגלריה</button>
       <button class="shutter" id="shutterBtn" aria-label="צלם"></button>
@@ -84,7 +76,7 @@
   <!-- STAGE 2: adjust corners -->
   <div id="stageCrop" class="stage">
     <canvas id="cropCanvas"></canvas>
-    <div class="topbar">גרור את הפינות שיתאימו בדיוק לדף</div>
+    <div class="topbar">גרור את הפינות בדיוק לקצוות הדף</div>
     <div class="controls" style="gap:10px;">
       <button class="bigbtn ghost" id="cropBack" style="flex:1;">צלם שוב</button>
       <button class="bigbtn primary" id="cropOk" style="flex:1;">חיתוך ויישור</button>
@@ -111,51 +103,32 @@
 </div>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/2.47.0/tabler-icons.min.css">
-<script src="https://cdn.jsdelivr.net/npm/@techstark/opencv-js@4.9.0-release.3/dist/opencv.js"></script>
 <script>
-// ---------- config (browser-grade publishable key — same one the app's chat uses) ----------
+// ===== config (browser-grade publishable key — same one the chat uses) =====
 const SUPA = {
   url: "https://atmwwpdlfnphmcycintg.supabase.co",
   key: "sb_publishable_EkhrIF35btZNIO3YEI-uPA_YLIfP-I-",
   bucket: "mishk-chat",
-  who: "abba"            // uploads land in inbox/abba/ — the desktop app watches this
+  who: "abba"
 };
 
-let cv = null;                 // opencv module (resolves async)
-let stream = null, track = null, torchOn = false;
 const $ = id => document.getElementById(id);
 const stages = { cam:$("stageCam"), crop:$("stageCrop"), result:$("stageResult") };
-function show(name){ for(const k in stages) stages[k].classList.toggle("on", k===name); }
+function show(n){ for(const k in stages) stages[k].classList.toggle("on", k===n); }
 function toast(msg, ms){ const t=$("toast"); t.textContent=msg; t.style.display="block";
-  if(ms){ clearTimeout(t._h); t._h=setTimeout(()=>t.style.display="none", ms); } }
+  clearTimeout(t._h); if(ms) t._h=setTimeout(()=>t.style.display="none", ms); }
 
-// captured full-resolution still + working state
-let captured = null;           // {canvas, w, h}
-let corners = null;            // [{x,y}*4] in cropCanvas display coords
-let warpedCanvas = null;       // perspective-corrected color result
+let stream=null, track=null, torchOn=false;
+let captured=null;          // {canvas,w,h}
+let corners=null;           // display-space [{x,y}*4]
+let cropFit=null;
+let warpedCanvas=null;
+let currentFilter="enhance";
 
-// ---------- boot ----------
-(async function boot(){
-  // start the camera immediately so the user sees the viewfinder even while
-  // the (large) OpenCV module is still downloading.
+// ===== boot: camera only, no heavy libraries =====
+(async function(){
   await startCamera();
-  let c = window.cv;
-  try{
-    if(c && typeof c.then === "function") c = await c;        // @techstark: promise -> ready module
-    else if(c && !c.Mat){ await new Promise(res=>{ c.onRuntimeInitialized = res; }); }
-  }catch(e){}
-  // last-resort: poll until Mat is really available (max ~20s)
-  for(let i=0; i<200 && (!c || !c.Mat); i++){
-    await new Promise(r=>setTimeout(r,100));
-    if(window.cv && typeof window.cv.then !== "function" && window.cv.Mat) c = window.cv;
-  }
-  cv = c;
   $("loading").style.display="none";
-  if(!cv || !cv.Mat){
-    toast("הסורק לא נטען עד הסוף — משוך את הדף מטה כדי לרענן", 6000);
-    return;   // camera still works for a manual photo; edge-detect/crop need cv
-  }
-  liveDetectLoop();
 })();
 
 async function startCamera(){
@@ -163,138 +136,50 @@ async function startCamera(){
     stream = await navigator.mediaDevices.getUserMedia({
       video:{ facingMode:{ ideal:"environment" }, width:{ ideal:2560 }, height:{ ideal:1440 } },
       audio:false });
-    const v=$("cam"); v.srcObject=stream; await v.play();
+    const v=$("cam"); v.srcObject=stream; await v.play().catch(()=>{});
     track = stream.getVideoTracks()[0];
     const caps = track.getCapabilities ? track.getCapabilities() : {};
-    if(!caps.torch) $("torchBtn").style.display="none";
+    if(!caps || !caps.torch) $("torchBtn").style.display="none";
   }catch(e){
-    toast("אין גישה למצלמה — אפשר לבחור תמונה מהגלריה");
     $("torchBtn").style.display="none";
+    toast("אין גישה למצלמה — אפשר לבחור תמונה מהגלריה", 4000);
   }
 }
 
-// ---------- live edge hint (lightweight, downscaled) ----------
-let liveBusy=false;
-function liveDetectLoop(){
-  const v=$("cam"), ov=$("overlay");
-  function tick(){
-    if(stages.cam.classList.contains("on") && v.videoWidth && cv && cv.Mat && !liveBusy){
-      liveBusy=true;
-      try{
-        ov.width=v.clientWidth; ov.height=v.clientHeight;
-        const quad = detectQuadFromVideo(v, 320);
-        const ctx=ov.getContext("2d"); ctx.clearRect(0,0,ov.width,ov.height);
-        if(quad){
-          const sx=ov.width/320, sy=ov.height/(320*v.videoHeight/v.videoWidth);
-          ctx.strokeStyle="#1D9E75"; ctx.lineWidth=3; ctx.fillStyle="#1D9E7522";
-          ctx.beginPath();
-          quad.forEach((p,i)=>{ const x=p.x*sx, y=p.y*sy; i?ctx.lineTo(x,y):ctx.moveTo(x,y); });
-          ctx.closePath(); ctx.fill(); ctx.stroke();
-          $("hint").textContent="זוהה דף ✓";
-        } else { $("hint").textContent=""; }
-      }catch(e){}
-      liveBusy=false;
-    }
-    requestAnimationFrame(tick);
-  }
-  requestAnimationFrame(tick);
-}
-
-// detect on a downscaled copy; returns 4 points in the scaled space or null
-function detectQuadFromVideo(video, targetW){
-  const ratio = targetW/video.videoWidth;
-  const w=targetW, h=Math.round(video.videoHeight*ratio);
-  const c=document.createElement("canvas"); c.width=w; c.height=h;
-  c.getContext("2d").drawImage(video,0,0,w,h);
-  return detectQuadFromCanvas(c);
-}
-
-function detectQuadFromCanvas(canvas){
-  let src=cv.imread(canvas), gray=new cv.Mat(), blur=new cv.Mat(), edge=new cv.Mat();
-  let best=null;
-  try{
-    cv.cvtColor(src,gray,cv.COLOR_RGBA2GRAY);
-    cv.GaussianBlur(gray,blur,new cv.Size(5,5),0);
-    cv.Canny(blur,edge,60,180);
-    let k=cv.getStructuringElement(cv.MORPH_RECT,new cv.Size(5,5));
-    cv.dilate(edge,edge,k); k.delete();
-    let contours=new cv.MatVector(), hier=new cv.Mat();
-    cv.findContours(edge,contours,hier,cv.RETR_LIST,cv.CHAIN_APPROX_SIMPLE);
-    const area0=canvas.width*canvas.height; let bestArea=area0*0.15;
-    for(let i=0;i<contours.size();i++){
-      const cnt=contours.get(i); const peri=cv.arcLength(cnt,true);
-      const approx=new cv.Mat(); cv.approxPolyDP(cnt,approx,0.02*peri,true);
-      const a=Math.abs(cv.contourArea(approx));
-      if(approx.rows===4 && a>bestArea && cv.isContourConvex(approx)){
-        bestArea=a; const pts=[];
-        for(let j=0;j<4;j++) pts.push({x:approx.data32S[j*2], y:approx.data32S[j*2+1]});
-        best=orderCorners(pts);
-      }
-      approx.delete(); cnt.delete();
-    }
-    contours.delete(); hier.delete();
-  }catch(e){} finally{ src.delete(); gray.delete(); blur.delete(); edge.delete(); }
-  return best;
-}
-
-function orderCorners(pts){
-  const s=pts.map(p=>p.x+p.y), d=pts.map(p=>p.x-p.y);
-  return [
-    pts[s.indexOf(Math.min(...s))], // tl
-    pts[d.indexOf(Math.max(...d))], // tr
-    pts[s.indexOf(Math.max(...s))], // br
-    pts[d.indexOf(Math.min(...d))], // bl
-  ];
-}
-
-// ---------- capture ----------
+// ===== capture =====
 $("shutterBtn").onclick=()=>{
   const v=$("cam");
   if(!v.videoWidth){ toast("המצלמה עוד לא מוכנה",1500); return; }
   const c=document.createElement("canvas"); c.width=v.videoWidth; c.height=v.videoHeight;
   c.getContext("2d").drawImage(v,0,0);
-  captured={canvas:c, w:c.width, h:c.height};
-  enterCrop();
+  captured={canvas:c,w:c.width,h:c.height}; enterCrop();
 };
 $("galleryBtn").onclick=()=>$("fileInput").click();
 $("fileInput").onchange=e=>{
   const f=e.target.files[0]; if(!f) return;
-  const img=new Image(); img.onload=()=>{
-    const c=document.createElement("canvas"); c.width=img.naturalWidth; c.height=img.naturalHeight;
-    c.getContext("2d").drawImage(img,0,0);
-    captured={canvas:c,w:c.width,h:c.height}; enterCrop();
-  }; img.src=URL.createObjectURL(f);
+  const img=new Image();
+  img.onload=()=>{ const c=document.createElement("canvas"); c.width=img.naturalWidth; c.height=img.naturalHeight;
+    c.getContext("2d").drawImage(img,0,0); captured={canvas:c,w:c.width,h:c.height}; enterCrop(); };
+  img.src=URL.createObjectURL(f);
 };
-$("torchBtn").onclick=async()=>{
-  if(!track) return;
-  try{ torchOn=!torchOn; await track.applyConstraints({advanced:[{torch:torchOn}]}); }catch(e){}
-};
+$("torchBtn").onclick=async()=>{ if(!track) return;
+  try{ torchOn=!torchOn; await track.applyConstraints({advanced:[{torch:torchOn}]}); }catch(e){} };
 
-// ---------- crop stage with draggable handles ----------
-let cropFit=null; // {scale, offx, offy, dispW, dispH}
+// ===== crop stage (manual draggable corners) =====
 function enterCrop(){
   show("crop");
   const cc=$("cropCanvas"), W=cc.clientWidth, H=cc.clientHeight;
   cc.width=W; cc.height=H;
-  // fit captured into the canvas (contain)
   const scale=Math.min(W/captured.w, H/captured.h);
   const dispW=captured.w*scale, dispH=captured.h*scale;
   const offx=(W-dispW)/2, offy=(H-dispH)/2;
   cropFit={scale,offx,offy,dispW,dispH};
-  // auto-detect quad on full capture, else default inset box
-  let quad=null;
-  try{ quad=detectQuadFromCanvas(captured.canvas); }catch(e){}
-  if(quad){ corners=quad.map(p=>({x:offx+p.x*scale, y:offy+p.y*scale})); }
-  else {
-    const m=0.12;
-    corners=[{x:offx+dispW*m,y:offy+dispH*m},{x:offx+dispW*(1-m),y:offy+dispH*m},
-             {x:offx+dispW*(1-m),y:offy+dispH*(1-m)},{x:offx+dispW*m,y:offy+dispH*(1-m)}];
-  }
+  const m=0.10;
+  corners=[{x:offx+dispW*m,y:offy+dispH*m},{x:offx+dispW*(1-m),y:offy+dispH*m},
+           {x:offx+dispW*(1-m),y:offy+dispH*(1-m)},{x:offx+dispW*m,y:offy+dispH*(1-m)}];
   document.querySelectorAll(".handle").forEach(h=>h.remove());
-  corners.forEach((p,i)=>{
-    const h=document.createElement("div"); h.className="handle"; h.dataset.i=i;
-    stages.crop.appendChild(h); makeDraggable(h,i);
-  });
+  corners.forEach((p,i)=>{ const h=document.createElement("div"); h.className="handle"; h.dataset.i=i;
+    stages.crop.appendChild(h); makeDraggable(h,i); });
   drawCrop();
 }
 function drawCrop(){
@@ -312,90 +197,127 @@ function makeDraggable(h,i){
     const r=$("cropCanvas").getBoundingClientRect();
     corners[i]={x:Math.max(0,Math.min(r.width,t.clientX-r.left)),
                 y:Math.max(0,Math.min(r.height,t.clientY-r.top))}; drawCrop(); };
-  const up=()=>{ document.removeEventListener("touchmove",move); document.removeEventListener("mousemove",move);
-    document.removeEventListener("touchend",up); document.removeEventListener("mouseup",up); };
+  const up=()=>{ ["touchmove","mousemove"].forEach(ev=>document.removeEventListener(ev,move));
+    ["touchend","mouseup"].forEach(ev=>document.removeEventListener(ev,up)); };
   const down=e=>{ e.preventDefault(); document.addEventListener("touchmove",move,{passive:false});
-    document.addEventListener("mousemove",move); document.addEventListener("touchend",up);
-    document.addEventListener("mouseup",up); };
+    document.addEventListener("mousemove",move); document.addEventListener("touchend",up); document.addEventListener("mouseup",up); };
   h.addEventListener("touchstart",down,{passive:false}); h.addEventListener("mousedown",down);
 }
-$("cropBack").onclick=()=>{ show("cam"); };
-$("cropOk").onclick=()=>{ warpPerspective(); enterResult(); };
+$("cropBack").onclick=()=>show("cam");
+$("cropOk").onclick=()=>{ try{ warpPerspective(); enterResult(); }catch(e){ toast("שגיאה בעיבוד",2000); } };
 
-// map display corners back to source pixels, warp to a flat rectangle
+// ===== pure-JS perspective warp =====
+function solveH(src,dst){
+  // returns 3x3 (h8=1) mapping src->dst, via 8x8 linear solve
+  const A=[], b=[];
+  for(let i=0;i<4;i++){ const {x,y}=src[i], {x:u,y:v}=dst[i];
+    A.push([x,y,1,0,0,0,-u*x,-u*y]); b.push(u);
+    A.push([0,0,0,x,y,1,-v*x,-v*y]); b.push(v); }
+  // Gaussian elimination
+  for(let c=0;c<8;c++){
+    let p=c; for(let r=c+1;r<8;r++) if(Math.abs(A[r][c])>Math.abs(A[p][c])) p=r;
+    [A[c],A[p]]=[A[p],A[c]]; [b[c],b[p]]=[b[p],b[c]];
+    const pv=A[c][c]||1e-9;
+    for(let r=0;r<8;r++){ if(r===c) continue; const f=A[r][c]/pv;
+      for(let k=c;k<8;k++) A[r][k]-=f*A[c][k]; b[r]-=f*b[c]; }
+  }
+  const h=[]; for(let i=0;i<8;i++) h.push(b[i]/(A[i][i]||1e-9)); h.push(1);
+  return h;
+}
 function warpPerspective(){
   const src=corners.map(p=>({x:(p.x-cropFit.offx)/cropFit.scale, y:(p.y-cropFit.offy)/cropFit.scale}));
   const [tl,tr,br,bl]=src;
-  const wA=Math.hypot(br.x-bl.x,br.y-bl.y), wB=Math.hypot(tr.x-tl.x,tr.y-tl.y);
-  const hA=Math.hypot(tr.x-br.x,tr.y-br.y), hB=Math.hypot(tl.x-bl.x,tl.y-bl.y);
-  const W=Math.max(1,Math.round(Math.max(wA,wB))), H=Math.max(1,Math.round(Math.max(hA,hB)));
-  let m=cv.imread(captured.canvas);
-  let srcTri=cv.matFromArray(4,1,cv.CV_32FC2,[tl.x,tl.y,tr.x,tr.y,br.x,br.y,bl.x,bl.y]);
-  let dstTri=cv.matFromArray(4,1,cv.CV_32FC2,[0,0,W,0,W,H,0,H]);
-  let M=cv.getPerspectiveTransform(srcTri,dstTri), out=new cv.Mat();
-  cv.warpPerspective(m,out,M,new cv.Size(W,H),cv.INTER_LINEAR,cv.BORDER_REPLICATE);
-  warpedCanvas=document.createElement("canvas"); cv.imshow(warpedCanvas,out);
-  m.delete(); srcTri.delete(); dstTri.delete(); M.delete(); out.delete();
+  let W=Math.round(Math.max(Math.hypot(br.x-bl.x,br.y-bl.y), Math.hypot(tr.x-tl.x,tr.y-tl.y)));
+  let H=Math.round(Math.max(Math.hypot(tr.x-br.x,tr.y-br.y), Math.hypot(tl.x-bl.x,tl.y-bl.y)));
+  const cap=1700, sc=Math.min(1,cap/Math.max(W,H)); W=Math.max(1,Math.round(W*sc)); H=Math.max(1,Math.round(H*sc));
+  const dstRect=[{x:0,y:0},{x:W,y:0},{x:W,y:H},{x:0,y:H}];
+  const Hm=solveH(dstRect, src);   // dst(x,y) -> source-image coords
+
+  const sCanvas=captured.canvas, sctx=sCanvas.getContext("2d");
+  const sImg=sctx.getImageData(0,0,sCanvas.width,sCanvas.height), sd=sImg.data, sw=sCanvas.width, sh=sCanvas.height;
+  const out=document.createElement("canvas"); out.width=W; out.height=H;
+  const octx=out.getContext("2d"), oImg=octx.createImageData(W,H), od=oImg.data;
+  for(let y=0;y<H;y++){
+    for(let x=0;x<W;x++){
+      const dn=Hm[6]*x+Hm[7]*y+Hm[8];
+      const fx=(Hm[0]*x+Hm[1]*y+Hm[2])/dn, fy=(Hm[3]*x+Hm[4]*y+Hm[5])/dn;
+      const di=(y*W+x)*4;
+      if(fx<0||fy<0||fx>=sw-1||fy>=sh-1){ od[di]=od[di+1]=od[di+2]=255; od[di+3]=255; continue; }
+      const x0=fx|0, y0=fy|0, ax=fx-x0, ay=fy-y0;
+      const i00=(y0*sw+x0)*4, i10=i00+4, i01=i00+sw*4, i11=i01+4;
+      for(let c=0;c<3;c++){
+        const top=sd[i00+c]*(1-ax)+sd[i10+c]*ax, bot=sd[i01+c]*(1-ax)+sd[i11+c]*ax;
+        od[di+c]=top*(1-ay)+bot*ay;
+      }
+      od[di+3]=255;
+    }
+  }
+  octx.putImageData(oImg,0,0);
+  warpedCanvas=out;
 }
 
-// ---------- filters ----------
-let currentFilter="enhance";
+// ===== pure-JS filters (grayscale, shadow-removal, adaptive B&W, enhance) =====
+function integralMean(gray,w,h,rad){
+  // summed-area table -> local mean with box radius rad
+  const I=new Float64Array((w+1)*(h+1));
+  for(let y=0;y<h;y++){ let row=0; for(let x=0;x<w;x++){ row+=gray[y*w+x];
+    I[(y+1)*(w+1)+(x+1)] = I[y*(w+1)+(x+1)] + row; } }
+  const mean=new Float32Array(w*h);
+  for(let y=0;y<h;y++) for(let x=0;x<w;x++){
+    const x0=Math.max(0,x-rad), y0=Math.max(0,y-rad), x1=Math.min(w-1,x+rad), y1=Math.min(h-1,y+rad);
+    const A=I[y0*(w+1)+x0], B=I[y0*(w+1)+(x1+1)], C=I[(y1+1)*(w+1)+x0], D=I[(y1+1)*(w+1)+(x1+1)];
+    mean[y*w+x]=(D-B-C+A)/((x1-x0+1)*(y1-y0+1));
+  }
+  return mean;
+}
 function applyFilter(name){
-  let src=cv.imread(warpedCanvas), dst=new cv.Mat();
-  try{
-    if(name==="original"){ src.copyTo(dst); }
-    else if(name==="bw"){
-      cv.cvtColor(src,dst,cv.COLOR_RGBA2GRAY);
-      cv.adaptiveThreshold(dst,dst,255,cv.ADAPTIVE_THRESH_GAUSSIAN_C,cv.THRESH_BINARY,21,12);
-      cv.cvtColor(dst,dst,cv.COLOR_GRAY2RGBA);
+  const w=warpedCanvas.width, h=warpedCanvas.height, ctx=warpedCanvas.getContext("2d");
+  const img=ctx.getImageData(0,0,w,h), d=img.data;
+  if(name!=="original"){
+    const gray=new Float32Array(w*h);
+    for(let i=0,p=0;i<d.length;i+=4,p++) gray[p]=0.299*d[i]+0.587*d[i+1]+0.114*d[i+2];
+    const rad=Math.max(8, Math.round(Math.min(w,h)/12));
+    const bg=integralMean(gray,w,h,rad);
+    if(name==="bw"){
+      const C=10;
+      for(let i=0,p=0;i<d.length;i+=4,p++){ const v=gray[p] > (bg[p]-C) ? 255:0; d[i]=d[i+1]=d[i+2]=v; }
+    } else if(name==="gray"){
+      for(let i=0,p=0;i<d.length;i+=4,p++){ let v=gray[p]*(200/(bg[p]||1)); // flatten illumination
+        v=(v-128)*1.25+128; v=v<0?0:v>255?255:v; d[i]=d[i+1]=d[i+2]=v; }
+    } else { // enhance: divide each channel by background luminance -> white page, keep ink/color
+      for(let i=0,p=0;i<d.length;i+=4,p++){ const g=(bg[p]||1), k=235/g;
+        for(let c=0;c<3;c++){ let v=d[i+c]*k; v=(v-128)*1.12+130; d[i+c]=v<0?0:v>255?255:v; } }
     }
-    else if(name==="gray"){
-      cv.cvtColor(src,dst,cv.COLOR_RGBA2GRAY);
-      let clahe=new cv.CLAHE(2.5,new cv.Size(8,8)); clahe.apply(dst,dst); clahe.delete();
-      cv.cvtColor(dst,dst,cv.COLOR_GRAY2RGBA);
-    }
-    else { // enhance: shadow-flatten + contrast/saturation boost (CamScanner "color document")
-      let rgb=new cv.Mat(); cv.cvtColor(src,rgb,cv.COLOR_RGBA2RGB);
-      let lab=new cv.Mat(); cv.cvtColor(rgb,lab,cv.COLOR_RGB2Lab);
-      let ch=new cv.MatVector(); cv.split(lab,ch);
-      let L=ch.get(0); let clahe=new cv.CLAHE(2.0,new cv.Size(8,8)); clahe.apply(L,L); clahe.delete();
-      let vec=new cv.MatVector(); vec.push_back(L); vec.push_back(ch.get(1)); vec.push_back(ch.get(2));
-      cv.merge(vec,lab); cv.cvtColor(lab,rgb,cv.COLOR_Lab2RGB);
-      cv.convertScaleAbs(rgb,rgb,1.15,8);
-      cv.cvtColor(rgb,dst,cv.COLOR_RGB2RGBA);
-      rgb.delete(); lab.delete(); ch.delete(); vec.delete();
-    }
-    const outC=document.createElement("canvas"); cv.imshow(outC,dst);
-    $("preview").src=outC.toDataURL("image/jpeg",0.92);
-  }catch(e){ toast("שגיאת עיבוד",1500); }
-  finally{ src.delete(); dst.delete(); }
+  }
+  ctx.putImageData(img,0,0);
+  $("preview").src=warpedCanvas.toDataURL("image/jpeg",0.92);
 }
 function enterResult(){ show("result"); currentFilter="enhance";
   document.querySelectorAll(".chip").forEach(c=>c.classList.toggle("sel",c.dataset.f==="enhance"));
+  // re-warp fresh each time filters change (filters are destructive), so keep a clean copy
   applyFilter("enhance"); }
 $("filters").addEventListener("click",e=>{ const b=e.target.closest(".chip"); if(!b) return;
   document.querySelectorAll(".chip").forEach(c=>c.classList.remove("sel")); b.classList.add("sel");
-  currentFilter=b.dataset.f; applyFilter(currentFilter); });
+  currentFilter=b.dataset.f; warpPerspective(); applyFilter(currentFilter); });  // re-warp = clean source
 $("resBack").onclick=()=>enterCrop();
 
-// ---------- send to software (upload to Supabase inbox) ----------
+// ===== send to software (upload to Supabase inbox) =====
 $("sendBtn").onclick=async()=>{
   const dataUrl=$("preview").src;
-  if(!dataUrl.startsWith("data:")){ toast("אין תמונה",1500); return; }
+  if(!dataUrl || dataUrl.indexOf("data:")!==0){ toast("אין תמונה",1500); return; }
   toast("שולח לתוכנה…");
   try{
     const blob=await (await fetch(dataUrl)).blob();
     const ts=new Date().toISOString().replace(/[:.]/g,"-");
-    const obj=`inbox/${SUPA.who}/${ts}_${currentFilter}.jpg`;
-    const res=await fetch(`${SUPA.url}/storage/v1/object/${SUPA.bucket}/${encodeURIComponent(obj)}`,{
+    const obj="inbox/"+SUPA.who+"/"+ts+"_"+currentFilter+".jpg";
+    const res=await fetch(SUPA.url+"/storage/v1/object/"+SUPA.bucket+"/"+encodeURIComponent(obj),{
       method:"POST",
-      headers:{ apikey:SUPA.key, Authorization:`Bearer ${SUPA.key}`,
-                "Content-Type":"image/jpeg","x-upsert":"true" },
+      headers:{ apikey:SUPA.key, Authorization:"Bearer "+SUPA.key, "Content-Type":"image/jpeg", "x-upsert":"true" },
       body:blob });
     if(!res.ok) throw new Error(await res.text());
-    toast("✓ נשלח! מופיע בתוכנה בעוד רגע",2500);
-    setTimeout(()=>{ show("cam"); },1200);
-  }catch(e){ toast("שגיאת שליחה: "+(e.message||e).slice(0,60),3000); }
+    toast("✓ נשלח! מופיע בתוכנה בעוד רגע", 2600);
+    setTimeout(()=>show("cam"), 1300);
+  }catch(e){ toast("שגיאת שליחה: "+String(e.message||e).slice(0,80), 4000); }
 };
 </script>
 </body>
