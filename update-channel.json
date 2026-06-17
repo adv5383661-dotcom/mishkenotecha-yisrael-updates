@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.7.46-iphone-scanner-20260617_1723",
+  "version": "1.7.47-iphone-scanner-20260617_2106",
   "description": "חדש: מצלמים דף עם האייפון וההצילום נכנס לבד לתוכנה, כבר מזוהה ומוכן לתיקון (בלי כבל ובלי העברת קבצים). המצלמה מיישרת וחותכת את הדף לבד כמו אפליקציית סריקה. בפתיחה הראשונה יופיע מסך קצר עם קוד לסריקה והסבר.",
-  "url": "MishkenotechaYisrael_v1.7.46_20260617_1723.mishupdate",
-  "sha256": "0111241ce3d94e4422a31e908bab9983b954f6ca1efcf365ad555527c230784e",
-  "size": 17875625,
-  "created_at": "2026-06-17 17:23:46"
+  "url": "MishkenotechaYisrael_v1.7.47_20260617_2106.mishupdate",
+  "sha256": "7df66092a74ccc08ff98bc9e7e0f56b93cb044ba1ce8d687826aee0d3f8fdfd7",
+  "size": 17877322,
+  "created_at": "2026-06-17 21:06:05"
 }
