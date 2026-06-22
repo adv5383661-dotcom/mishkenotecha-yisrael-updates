@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.7.60-archive-scroll-20260622_1605",
-  "description": "ברשימת הארכיון: כשחוזרים מדף שעבדת עליו (או פותחים את הארכיון תוך כדי עבודה), הרשימה נפתחת עכשיו בדיוק במקום שבו עסקת — עם הדגשה קצרה — ולא קופצת לראש שצריך לגלול ולחפש. רק להתקין.",
-  "url": "MishkenotechaYisrael_v1.7.60_20260622_1605.mishupdate",
-  "sha256": "c3fcdc2d79c9b2e7c8e36aa2f0efc67ee4d47271c50f0c172269efcc1ee2ea80",
-  "size": 17775323,
-  "created_at": "2026-06-22 16:05:24"
+  "version": "1.7.61-archive-scroll-fix-20260622_1629",
+  "description": "תיקון המשך לרשימת הארכיון: החזרה למקום שעבדת עליו עכשיו עובדת בכל פעם (לא רק פעם אחת), והרשימה כבר לא קופצת לראש אחרי רענון אוטומטי או מתן שם. רק להתקין.",
+  "url": "MishkenotechaYisrael_v1.7.61_20260622_1629.mishupdate",
+  "sha256": "fc93183aaef540853bcd266c56e58a81e0ec40e2f1d04e513f7cc6abc8a6916c",
+  "size": 17775623,
+  "created_at": "2026-06-22 16:29:35"
 }
