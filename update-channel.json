@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.7.59-chat-img-leak-20260622_1552",
-  "description": "תוקן: כששלחת תמונה דרך הצ'אט, התמונה הופיעה בטעות גם ב'תצוגת דף' (כאילו העלית דף לזיהוי). עכשיו תמונה ששולחים בצ'אט נשארת בצ'אט בלבד. רק להתקין.",
-  "url": "MishkenotechaYisrael_v1.7.59_20260622_1552.mishupdate",
-  "sha256": "315c4364c8a59d76d3517cbb504a62faf24f9f962eabb7ed8f0ba9f6fdcb038b",
-  "size": 17774848,
-  "created_at": "2026-06-22 15:52:27"
+  "version": "1.7.60-archive-scroll-20260622_1605",
+  "description": "ברשימת הארכיון: כשחוזרים מדף שעבדת עליו (או פותחים את הארכיון תוך כדי עבודה), הרשימה נפתחת עכשיו בדיוק במקום שבו עסקת — עם הדגשה קצרה — ולא קופצת לראש שצריך לגלול ולחפש. רק להתקין.",
+  "url": "MishkenotechaYisrael_v1.7.60_20260622_1605.mishupdate",
+  "sha256": "c3fcdc2d79c9b2e7c8e36aa2f0efc67ee4d47271c50f0c172269efcc1ee2ea80",
+  "size": 17775323,
+  "created_at": "2026-06-22 16:05:24"
 }
