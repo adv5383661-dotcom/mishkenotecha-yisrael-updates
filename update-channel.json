@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.7.90-chat-receipt-race-20260706_2132",
-  "description": "תיקון לצ'אט: לפעמים הודעה כבר נקראה אצל הצד השני אבל אצלך המשיך להופיע רק וי אחד במקום שני וי כחולים. עכשיו סימון הקריאה נשמר כראוי ולא נדרס.",
-  "url": "MishkenotechaYisrael_v1.7.90_20260706_2132.mishupdate",
-  "sha256": "ea7846098b0097eaa63cd389c459fb60acb6a0f60550f76a3fef751d533ce5be",
-  "size": 17935837,
-  "created_at": "2026-07-06 21:32:03"
+  "version": "1.7.91-restart-robust-20260706_2145",
+  "description": "תיקון: אחרי עדכון התוכנה נפתחת מחדש לבד באופן אמין. קודם היא הייתה נסגרת ולפעמים לא חוזרת — עכשיו ההפעלה-מחדש עצמאית וממתינה כראוי לסגירה הקודמת.",
+  "url": "MishkenotechaYisrael_v1.7.91_20260706_2145.mishupdate",
+  "sha256": "b015c71444f19bb7b002cd1cdd18b7a61c1f622edc98eb5045afb054ad5733e7",
+  "size": 17936424,
+  "created_at": "2026-07-06 21:45:29"
 }
