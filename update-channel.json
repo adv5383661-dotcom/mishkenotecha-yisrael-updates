@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.7.88-line-split-fix-20260706_1049",
+  "version": "1.7.89-line-split-fix-20260706_1207",
   "description": "תיקון חשוב לזיהוי: לפעמים כמה שורות נדבקו יחד והטקסט יצא משובש וחסר פשר. עכשיו כל שורה נחתכת בנפרד, וגם פסים כהים בקצוות הדף (מהצילום) מסוננים. הזיהוי אמור לצאת נקי ומדויק יותר.",
-  "url": "MishkenotechaYisrael_v1.7.88_20260706_1049.mishupdate",
-  "sha256": "98c3708a05da1f6fb960bb3140a8b17a8b00902734c4b88b551fc5323fb31ea6",
-  "size": 17935218,
-  "created_at": "2026-07-06 10:49:23"
+  "url": "MishkenotechaYisrael_v1.7.89_20260706_1207.mishupdate",
+  "sha256": "2cd9de5614b67a2915b16ba4be729c45710362f6ac5d17b4770794dd75e9e4e4",
+  "size": 17935217,
+  "created_at": "2026-07-06 12:07:47"
 }
