@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.8.03-chat-colors-mic-guide-20260709_2221",
-  "description": "שיפור בצ'אט: הודעות נכנסות קיבלו צבע ירוק-טורקיז ברור במקום כהה, ונוסף מסך הדרכה חד-פעמי שמסביר לאבא איך לחבר ולאשר מיקרופון.",
-  "url": "MishkenotechaYisrael_v1.8.03_20260709_2221.mishupdate",
-  "sha256": "f32c374b0538cb3cd6550f3c3340d0f4c727b721c64fd5d67b6dd489a94a514d",
-  "size": 17946251,
-  "created_at": "2026-07-09 22:21:37"
+  "version": "1.8.04-closed-app-taskbar-badge-20260710_0243",
+  "description": "שיפור התראות הצ'אט: אחרי סגירת האפליקציה המלאה, צופה קטן ימשיך לעבוד וכשתגיע הודעה יציג אייקון משימה ממוזער של האפליקציה עם מספר ההודעות.",
+  "url": "MishkenotechaYisrael_v1.8.04_20260710_0243.mishupdate",
+  "sha256": "f92172460ff5be85bd36242804ba8c3a93b0b73d8ff7b844d752abe21115a995",
+  "size": 17947139,
+  "created_at": "2026-07-10 02:43:31"
 }
