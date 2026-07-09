@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.8.00-chat-nikud-edit-emojis-20260709_1325",
-  "description": "שיפור הצ'אט: אפשר לנקד טקסט מהכפתור אָ, לערוך הודעה שכבר נשלחה, ולבחור מתוך הרבה יותר אימוג'ים ותגובות מהירות.",
-  "url": "MishkenotechaYisrael_v1.8.00_20260709_1325.mishupdate",
-  "sha256": "e43ab69b8857bfdd3e848391cd71f9bc349c397a1d52373dc641893dcae5e1d4",
-  "size": 17946477,
-  "created_at": "2026-07-09 13:25:18"
+  "version": "1.8.01-emoji-picker-scroll-20260709_1652",
+  "description": "תיקון לצ'אט: לוח האימוג'ים המורחב נשאר בתוך החלון והרשימה נגללת כראוי, יחד עם אפשרויות הניקוד ועריכת ההודעות מהעדכון הקודם.",
+  "url": "MishkenotechaYisrael_v1.8.01_20260709_1652.mishupdate",
+  "sha256": "7d68dc955f0bd6f9a31cd566267d2f224bc0dc4c56627220e3cd76c38d317f2c",
+  "size": 17946865,
+  "created_at": "2026-07-09 16:53:01"
 }
