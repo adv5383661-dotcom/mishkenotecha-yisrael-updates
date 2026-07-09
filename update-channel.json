@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.7.96-call-debug-info-20260709_1231",
-  "description": "אם שיחת הווידאו לא מצליחה להתחבר — עכשיו יופיע גם פירוט טכני קצר על המסך, כדי שנוכל להבין מהר יותר מה בדיוק לא עבד.",
-  "url": "MishkenotechaYisrael_v1.7.96_20260709_1231.mishupdate",
-  "sha256": "de4ae4d59301933077f24426b3e9b3bbeda4bc90e2f32b50e7cb6438ced069a6",
-  "size": 17941052,
-  "created_at": "2026-07-09 12:31:33"
+  "version": "1.7.97-disable-ipv6-20260709_1239",
+  "description": "מצאתי את הסיבה האמיתית לתקלת שיחת הווידאו: הרשת שלך לא מגיבה לפניות IPv6, והתוכנה ניסתה קודם דרך שם — עכשיו היא עוברת ישר ל-IPv4, שעבד תמיד. השיחה אמורה להתחבר בפעם הזו.",
+  "url": "MishkenotechaYisrael_v1.7.97_20260709_1239.mishupdate",
+  "sha256": "5718a08ff3fcfafaf9b73d42a39071b88da132e93279c6ca81603da9a3161a99",
+  "size": 17941642,
+  "created_at": "2026-07-09 12:39:20"
 }
