@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.8.02-chat-presence-hover-20260709_2103",
-  "description": "תיקון לצ'אט: 'נראה לאחרונה' ו'מחובר' מתעדכנים רק כשחלון הצ'אט פתוח והעכבר נמצא ממש בתוך הצ'אט, לא רק כשהתוכנה פתוחה.",
-  "url": "MishkenotechaYisrael_v1.8.02_20260709_2103.mishupdate",
-  "sha256": "c6029eb570aa758c05e86c3437e4dd300a6379c5a0dcde9005e5af5e13aac3be",
-  "size": 17946847,
-  "created_at": "2026-07-09 21:03:11"
+  "version": "1.8.03-chat-colors-mic-guide-20260709_2221",
+  "description": "שיפור בצ'אט: הודעות נכנסות קיבלו צבע ירוק-טורקיז ברור במקום כהה, ונוסף מסך הדרכה חד-פעמי שמסביר לאבא איך לחבר ולאשר מיקרופון.",
+  "url": "MishkenotechaYisrael_v1.8.03_20260709_2221.mishupdate",
+  "sha256": "f32c374b0538cb3cd6550f3c3340d0f4c727b721c64fd5d67b6dd489a94a514d",
+  "size": 17946251,
+  "created_at": "2026-07-09 22:21:37"
 }
