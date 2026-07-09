@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.8.01-emoji-picker-scroll-20260709_1652",
-  "description": "תיקון לצ'אט: לוח האימוג'ים המורחב נשאר בתוך החלון והרשימה נגללת כראוי, יחד עם אפשרויות הניקוד ועריכת ההודעות מהעדכון הקודם.",
-  "url": "MishkenotechaYisrael_v1.8.01_20260709_1652.mishupdate",
-  "sha256": "7d68dc955f0bd6f9a31cd566267d2f224bc0dc4c56627220e3cd76c38d317f2c",
-  "size": 17946865,
-  "created_at": "2026-07-09 16:53:01"
+  "version": "1.8.02-chat-presence-hover-20260709_2103",
+  "description": "תיקון לצ'אט: 'נראה לאחרונה' ו'מחובר' מתעדכנים רק כשחלון הצ'אט פתוח והעכבר נמצא ממש בתוך הצ'אט, לא רק כשהתוכנה פתוחה.",
+  "url": "MishkenotechaYisrael_v1.8.02_20260709_2103.mishupdate",
+  "sha256": "c6029eb570aa758c05e86c3437e4dd300a6379c5a0dcde9005e5af5e13aac3be",
+  "size": 17946847,
+  "created_at": "2026-07-09 21:03:11"
 }
