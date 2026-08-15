@@ -106,9 +106,12 @@
 <script>
 // ===== config (browser-grade publishable key — same one the chat uses) =====
 const SUPA = {
-  url: "https://uuaflcdatuzaqdwmfdwe.supabase.co",
-  key: "sb_publishable_ygCbY4-59cmn8DOCR3RiOA_CgBTjmxF",
-  bucket: "mishk-chat",
+  // Cloudflare R2 through the mishk-gate Worker. This token is upload-only and
+  // scoped to inbox/ -- it is embedded in a public page, so it must not be able
+  // to read the chat, delete anything, or touch any other folder. The gate
+  // enforces that, not this page.
+  gate: "https://mishk-gate.mishk-gate.workers.dev",
+  key: "_rVaFXsFBAu_VApv_6KlGgXh8nM0MF4M",
   who: "abba"
 };
 
@@ -301,7 +304,7 @@ $("filters").addEventListener("click",e=>{ const b=e.target.closest(".chip"); if
   currentFilter=b.dataset.f; warpPerspective(); applyFilter(currentFilter); });  // re-warp = clean source
 $("resBack").onclick=()=>enterCrop();
 
-// ===== send to software (upload to Supabase inbox) =====
+// ===== send to software (upload to the R2 inbox through mishk-gate) =====
 $("sendBtn").onclick=async()=>{
   const dataUrl=$("preview").src;
   if(!dataUrl || dataUrl.indexOf("data:")!==0){ toast("אין תמונה",1500); return; }
@@ -310,9 +313,9 @@ $("sendBtn").onclick=async()=>{
     const blob=await (await fetch(dataUrl)).blob();
     const ts=new Date().toISOString().replace(/[:.]/g,"-");
     const obj="inbox/"+SUPA.who+"/"+ts+"_"+currentFilter+".jpg";
-    const res=await fetch(SUPA.url+"/storage/v1/object/"+SUPA.bucket+"/"+encodeURIComponent(obj),{
-      method:"POST",
-      headers:{ apikey:SUPA.key, Authorization:"Bearer "+SUPA.key, "Content-Type":"image/jpeg", "x-upsert":"true" },
+    const res=await fetch(SUPA.gate+"/o/"+obj,{
+      method:"PUT",
+      headers:{ Authorization:"Bearer "+SUPA.key, "Content-Type":"image/jpeg" },
       body:blob });
     if(!res.ok) throw new Error(await res.text());
     toast("✓ נשלח! מופיע בתוכנה בעוד רגע", 2600);
