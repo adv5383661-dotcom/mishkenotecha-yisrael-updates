@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.8.09-cloudflare-gate-20260815_2246",
-  "description": "הצ'אט והסריקות מהטלפון עברו לשרת חדש וגדול בהרבה, אחרי שהשרת הישן נתקע ונחסם. מעכשיו הצ'אט, שליחת התמונות והסריקה מהטלפון עובדים שוב. השיחות הישנות יחזרו בהמשך.",
-  "url": "MishkenotechaYisrael_v1.8.09_20260815_2246.mishupdate",
-  "sha256": "0774ba5fedf46bacba2346e83f7325d276ab5059f0324ddaca606ca9323e1a34",
-  "size": 17952737,
-  "created_at": "2026-08-15 22:46:46"
+  "version": "1.8.10-rescue-corrections-20260815_2316",
+  "description": "התיקונים שסימנת ולא הספיקו להישלח לאלי בזמן שהשרת היה תקוע — נשלחים עכשיו לבד. הצ'אט והסריקה מהטלפון ממשיכים לעבוד כרגיל.",
+  "url": "MishkenotechaYisrael_v1.8.10_20260815_2316.mishupdate",
+  "sha256": "d5c201fa9350f8ac284259261d9bd7e8887221593014cbc581cba0ced4d3be6c",
+  "size": 17952991,
+  "created_at": "2026-08-15 23:16:53"
 }
