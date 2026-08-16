@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.8.10-rescue-corrections-20260815_2316",
-  "description": "התיקונים שסימנת ולא הספיקו להישלח לאלי בזמן שהשרת היה תקוע — נשלחים עכשיו לבד. הצ'אט והסריקה מהטלפון ממשיכים לעבוד כרגיל.",
-  "url": "MishkenotechaYisrael_v1.8.10_20260815_2316.mishupdate",
-  "sha256": "d5c201fa9350f8ac284259261d9bd7e8887221593014cbc581cba0ced4d3be6c",
-  "size": 17952991,
-  "created_at": "2026-08-15 23:16:53"
+  "version": "1.8.11-chat-file-names-20260816_1308",
+  "description": "תיקון: שליחת קובץ או סרטון בצ'אט נכשלה כששם הקובץ בעברית הכיל נקודה באמצע. עכשיו כל קובץ נשלח כרגיל, בכל שם.",
+  "url": "MishkenotechaYisrael_v1.8.11_20260816_1308.mishupdate",
+  "sha256": "704d6a427d7c8f038bbd89872a4bd2f3475fc0d8b0bb58817b77dd491a0409cb",
+  "size": 17953278,
+  "created_at": "2026-08-16 13:08:19"
 }
