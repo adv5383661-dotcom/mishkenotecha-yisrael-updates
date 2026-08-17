@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.8.16-call-probe-fix-20260817_2205",
-  "description": "תיקון דחוף: הודעת 'אין כרגע קו פנוי' הופיעה גם כשכל השרתים עבדו. הבדיקה עצמה הייתה שגויה. עכשיו השיחות עובדות.",
-  "url": "MishkenotechaYisrael_v1.8.16_20260817_2205.mishupdate",
-  "sha256": "2e8b403f387a48e1537a8ba6340b57a3869e90979ff6d25d44ea5bf78b19373f",
-  "size": 17957795,
-  "created_at": "2026-08-17 22:05:28"
+  "version": "1.8.17-call-working-host-20260817_2216",
+  "description": "נמצאה הסיבה: שרת השיחות הקודם דרש 'מנהל מאומת', ולכן שני אורחים לא יכלו לפתוח שיחה לעולם. עברנו לשרתים שנבדקו ועובדים. עכשיו השיחה מתחברת.",
+  "url": "MishkenotechaYisrael_v1.8.17_20260817_2216.mishupdate",
+  "sha256": "45d38c70cd67a7a61e86a7950b3601350c4e584ac71d3e7681f111f4bf8b2081",
+  "size": 17958129,
+  "created_at": "2026-08-17 22:16:32"
 }
