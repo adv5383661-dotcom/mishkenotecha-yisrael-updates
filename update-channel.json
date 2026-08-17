@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.8.18-call-csp-20260817_2227",
-  "description": "השלמת תיקון השיחות: התוכנה עצמה חסמה את שרתי השיחות החדשים. עכשיו החסימה הוסרה והשיחה נפתחת.",
-  "url": "MishkenotechaYisrael_v1.8.18_20260817_2227.mishupdate",
-  "sha256": "dd54667175a7aae2a5f2f14e18eae7a6c4b5d9675cea4e21e975a9177b4c2dd8",
-  "size": 17958394,
-  "created_at": "2026-08-17 22:27:05"
+  "version": "1.8.19-call-same-room-20260817_2235",
+  "description": "כששניכם מתקשרים באותו רגע — עכשיו נפגשים באותה שיחה ולא בשתי שיחות נפרדות.",
+  "url": "MishkenotechaYisrael_v1.8.19_20260817_2235.mishupdate",
+  "sha256": "1205f4181fc4b9a809426f56b8876379e8e05d76ff3d2ffecb65cf19a900e319",
+  "size": 17958780,
+  "created_at": "2026-08-17 22:35:09"
 }
