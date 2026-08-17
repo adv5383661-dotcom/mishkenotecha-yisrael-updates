@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.8.15-call-failover-20260817_2135",
-  "description": "תיקון השיחות: השגיאה 'יותר מדי בקשות' הייתה הגבלה של שרת אחד. עכשיו התוכנה מחפשת קו פנוי בין כמה שרתים. וכשעונים לשיחה — צליל החיוג נפסק.",
-  "url": "MishkenotechaYisrael_v1.8.15_20260817_2135.mishupdate",
-  "sha256": "004807489d3d9b2ac9a0ca780aafdca2802a3f4e33e421d6e59e8dd09915eee1",
-  "size": 17957746,
-  "created_at": "2026-08-17 21:35:55"
+  "version": "1.8.16-call-probe-fix-20260817_2205",
+  "description": "תיקון דחוף: הודעת 'אין כרגע קו פנוי' הופיעה גם כשכל השרתים עבדו. הבדיקה עצמה הייתה שגויה. עכשיו השיחות עובדות.",
+  "url": "MishkenotechaYisrael_v1.8.16_20260817_2205.mishupdate",
+  "sha256": "2e8b403f387a48e1537a8ba6340b57a3869e90979ff6d25d44ea5bf78b19373f",
+  "size": 17957795,
+  "created_at": "2026-08-17 22:05:28"
 }
