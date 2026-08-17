@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.8.17-call-working-host-20260817_2216",
-  "description": "נמצאה הסיבה: שרת השיחות הקודם דרש 'מנהל מאומת', ולכן שני אורחים לא יכלו לפתוח שיחה לעולם. עברנו לשרתים שנבדקו ועובדים. עכשיו השיחה מתחברת.",
-  "url": "MishkenotechaYisrael_v1.8.17_20260817_2216.mishupdate",
-  "sha256": "45d38c70cd67a7a61e86a7950b3601350c4e584ac71d3e7681f111f4bf8b2081",
-  "size": 17958129,
-  "created_at": "2026-08-17 22:16:32"
+  "version": "1.8.18-call-csp-20260817_2227",
+  "description": "השלמת תיקון השיחות: התוכנה עצמה חסמה את שרתי השיחות החדשים. עכשיו החסימה הוסרה והשיחה נפתחת.",
+  "url": "MishkenotechaYisrael_v1.8.18_20260817_2227.mishupdate",
+  "sha256": "dd54667175a7aae2a5f2f14e18eae7a6c4b5d9675cea4e21e975a9177b4c2dd8",
+  "size": 17958394,
+  "created_at": "2026-08-17 22:27:05"
 }
