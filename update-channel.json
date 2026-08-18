@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.8.19-call-same-room-20260817_2235",
-  "description": "כששניכם מתקשרים באותו רגע — עכשיו נפגשים באותה שיחה ולא בשתי שיחות נפרדות.",
-  "url": "MishkenotechaYisrael_v1.8.19_20260817_2235.mishupdate",
-  "sha256": "1205f4181fc4b9a809426f56b8876379e8e05d76ff3d2ffecb65cf19a900e319",
-  "size": 17958780,
-  "created_at": "2026-08-17 22:35:09"
+  "version": "1.8.20-call-audio-quality-20260818_1153",
+  "description": "שיפור איכות הקול בשיחות — עכשיו שומעים חזק וברור משני הצדדים.",
+  "url": "MishkenotechaYisrael_v1.8.20_20260818_1153.mishupdate",
+  "sha256": "7f1b78a6875d645de0aa332ba6ea84d2da1a9e28485088da650fe1b8f2083a21",
+  "size": 17959089,
+  "created_at": "2026-08-18 11:53:23"
 }
