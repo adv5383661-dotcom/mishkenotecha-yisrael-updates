@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.8.20-call-audio-quality-20260818_1153",
-  "description": "שיפור איכות הקול בשיחות — עכשיו שומעים חזק וברור משני הצדדים.",
-  "url": "MishkenotechaYisrael_v1.8.20_20260818_1153.mishupdate",
-  "sha256": "7f1b78a6875d645de0aa332ba6ea84d2da1a9e28485088da650fe1b8f2083a21",
-  "size": 17959089,
-  "created_at": "2026-08-18 11:53:23"
+  "version": "1.8.21-call-connect-fix-20260818_1204",
+  "description": "תיקון: השיחה מתחברת שוב אחרי מענה, עם הקול המשופר.",
+  "url": "MishkenotechaYisrael_v1.8.21_20260818_1204.mishupdate",
+  "sha256": "b0a86ac0994b102438f8a39e8922a27315ba6c5370037b41098ddccdb04de803",
+  "size": 17959107,
+  "created_at": "2026-08-18 12:04:11"
 }
