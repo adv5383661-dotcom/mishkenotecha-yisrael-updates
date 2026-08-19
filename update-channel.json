@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.8.23-stereo-output-20260819_1204",
-  "description": "תיקון שמע: הקול חוזר לשתי האוזניים ולא נשמע \"מרחוק\". בכפתור 🎧 אפשר לבחור בין מיקרופון האוזנייה לבין מיקרופון המחשב.",
-  "url": "MishkenotechaYisrael_v1.8.23_20260819_1204.mishupdate",
-  "sha256": "46254a7bc606454c96a9646cb9745efdfdf0af72b4c7bf8dbce58dc86fa8ced2",
-  "size": 17964426,
-  "created_at": "2026-08-19 12:04:32"
+  "version": "1.8.24-direct-call-20260819_1255",
+  "description": "שיחות אודיו חדשות לגמרי: הקול עובר ישירות בין שני המחשבים, בלי שרת באמצע — צליל טוב יותר, ועכשיו יש גם כוונון עוצמה ובחירת רמקול אמיתית.",
+  "url": "MishkenotechaYisrael_v1.8.24_20260819_1255.mishupdate",
+  "sha256": "3d9c0ff169bf595ecf76f5eca533e29048821e409000197b420f2039ab5460e4",
+  "size": 17968683,
+  "created_at": "2026-08-19 12:55:13"
 }
