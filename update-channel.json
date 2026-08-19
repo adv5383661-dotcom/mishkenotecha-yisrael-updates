@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.8.22-bluetooth-audio-20260819_1155",
-  "description": "שיחות אודיו עם אוזניות בלוטות׳: התוכנה עוברת אליהן לבד, ויש כפתור 🎧 לבחירת מיקרופון ורמקול עם בדיקה שרואים בעין.",
-  "url": "MishkenotechaYisrael_v1.8.22_20260819_1155.mishupdate",
-  "sha256": "fb0cea0122b322627831fef1b1b3b726054dcdf164ef02f392fd4af2f05b9493",
-  "size": 17963126,
-  "created_at": "2026-08-19 11:55:09"
+  "version": "1.8.23-stereo-output-20260819_1204",
+  "description": "תיקון שמע: הקול חוזר לשתי האוזניים ולא נשמע \"מרחוק\". בכפתור 🎧 אפשר לבחור בין מיקרופון האוזנייה לבין מיקרופון המחשב.",
+  "url": "MishkenotechaYisrael_v1.8.23_20260819_1204.mishupdate",
+  "sha256": "46254a7bc606454c96a9646cb9745efdfdf0af72b4c7bf8dbce58dc86fa8ced2",
+  "size": 17964426,
+  "created_at": "2026-08-19 12:04:32"
 }
