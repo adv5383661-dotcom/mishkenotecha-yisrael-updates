@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.8.24-direct-call-20260819_1255",
-  "description": "שיחות אודיו חדשות לגמרי: הקול עובר ישירות בין שני המחשבים, בלי שרת באמצע — צליל טוב יותר, ועכשיו יש גם כוונון עוצמה ובחירת רמקול אמיתית.",
-  "url": "MishkenotechaYisrael_v1.8.24_20260819_1255.mishupdate",
-  "sha256": "3d9c0ff169bf595ecf76f5eca533e29048821e409000197b420f2039ab5460e4",
-  "size": 17968683,
-  "created_at": "2026-08-19 12:55:13"
+  "version": "1.8.25-call-hardening-20260819_1306",
+  "description": "השיחה כבר לא נתקעת: אם החיבור הישיר לא מצליח היא עוברת לדרך אחרת לבד, ניתוק מזוהה מיד, והמיקרופון נפתח פעם אחת בלבד.",
+  "url": "MishkenotechaYisrael_v1.8.25_20260819_1306.mishupdate",
+  "sha256": "7d9b9df0feb7e4480d8e2484fa761e0829cbcbf5dcee7cb44dd32df6eb868526",
+  "size": 17970843,
+  "created_at": "2026-08-19 13:06:07"
 }
