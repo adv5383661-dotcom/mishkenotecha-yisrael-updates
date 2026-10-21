@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.8.39-book-more-options-20261021_1614",
-  "description": "עימוד ספר — הכפתור העליון נקרא עכשיו \"אפשרויות נוספות\" (שם נמצאים PDF, ביטול, גרסאות, הסברים ומדריך).",
-  "url": "MishkenotechaYisrael_v1.8.39_20261021_1614.mishupdate",
-  "sha256": "5cdfa8073d41aa379cdc2e1fc19e4fb292741d32a08267ca7e0ead0cbd7ab24b",
-  "size": 18969210,
-  "created_at": "2026-10-21 16:14:54"
+  "version": "1.8.40-book-report-20261021_1620",
+  "description": "עימוד ספר — ב\"אפשרויות נוספות\" נוסף \"💬 דיווח על תקלה או רעיון\": כותבים במילים פשוטות, וההודעה מגיעה לאלי מיד עם צילום מסך.",
+  "url": "MishkenotechaYisrael_v1.8.40_20261021_1620.mishupdate",
+  "sha256": "7eeb5a1cdd17288d1ce15242c27170226f6eacade7a2d50bd1ab54ecc853b064",
+  "size": 18970142,
+  "created_at": "2026-10-21 16:21:03"
 }
