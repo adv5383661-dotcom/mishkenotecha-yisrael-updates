@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.8.38-book-tidy-20261021_1611",
-  "description": "עימוד ספר — כפתורים ברורים ומסודרים: ארבעה כפתורים כחולים למעלה, כפתורי כתיבה ופעולה מסודרים בטבלה שווה, וכפתור \"עריכה\" ברור בכל קטע.",
-  "url": "MishkenotechaYisrael_v1.8.38_20261021_1611.mishupdate",
-  "sha256": "511972ed168e8f578fc4346f08689e52e3f3b943f50e272cca525de7c8232f74",
-  "size": 18969200,
-  "created_at": "2026-10-21 16:12:09"
+  "version": "1.8.39-book-more-options-20261021_1614",
+  "description": "עימוד ספר — הכפתור העליון נקרא עכשיו \"אפשרויות נוספות\" (שם נמצאים PDF, ביטול, גרסאות, הסברים ומדריך).",
+  "url": "MishkenotechaYisrael_v1.8.39_20261021_1614.mishupdate",
+  "sha256": "5cdfa8073d41aa379cdc2e1fc19e4fb292741d32a08267ca7e0ead0cbd7ab24b",
+  "size": 18969210,
+  "created_at": "2026-10-21 16:14:54"
 }
