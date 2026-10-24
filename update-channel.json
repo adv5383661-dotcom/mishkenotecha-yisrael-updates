@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.8.41-coltop-20261022_1905",
-  "description": "עימוד ספר — פסקה שמתחילה בראש טור (בראש העמוד או בראש הטור השני) מתחילה בלי הזחה.",
-  "url": "MishkenotechaYisrael_v1.8.41_20261022_1905.mishupdate",
-  "sha256": "d96d706c24de183d6750828bc705f817160e2e3cb3f4be7466acaa2a88a2fbac",
-  "size": 18970365,
-  "created_at": "2026-10-22 19:05:50"
+  "version": "1.8.42-coleven-20261024_2122",
+  "description": "עימוד ספר — בשני טורים, שני הטורים מסתיימים עכשיו באותה שורה בתחתית העמוד.",
+  "url": "MishkenotechaYisrael_v1.8.42_20261024_2122.mishupdate",
+  "sha256": "5f393f99060617e172b3274de698cd88e028187ef6bec8dafffd8cb92d7b0403",
+  "size": 18971155,
+  "created_at": "2026-10-24 21:23:04"
 }
