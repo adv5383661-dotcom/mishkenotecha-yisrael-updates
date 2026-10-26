@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.8.46-title-page-20261026_1202",
-  "description": "עימוד ספר — עיצוב שער הספר: עשרה עיצובים מוכנים, מסגרות וקישוטים, וכל שורה בשער כרצונכם (גופן, גודל, הדגשה, ריווח, אותיות חלולות, מקום בדף, שורות משלכם).",
-  "url": "MishkenotechaYisrael_v1.8.46_20261026_1202.mishupdate",
-  "sha256": "4b7b4215f8355e7ad5b61f1560486cc97b1a07f753c655d0535ef0cffdff5f96",
-  "size": 18987069,
-  "created_at": "2026-10-26 12:02:20"
+  "version": "1.8.47-report-outbox-20261026_1227",
+  "description": "דיווח לאלי לא הולך לאיבוד: אם השליחה נכשלת, הדיווח נשמר ונשלח שוב לבד. ובעימוד ספר — עיצוב שער הספר בכל צורה.",
+  "url": "MishkenotechaYisrael_v1.8.47_20261026_1227.mishupdate",
+  "sha256": "35c299d38068eb6bac8efaf951dacb513b847440c79a2fd24529f89c2542cdb2",
+  "size": 18987494,
+  "created_at": "2026-10-26 12:28:04"
 }
