@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.8.47-report-outbox-20261026_1227",
-  "description": "דיווח לאלי לא הולך לאיבוד: אם השליחה נכשלת, הדיווח נשמר ונשלח שוב לבד. ובעימוד ספר — עיצוב שער הספר בכל צורה.",
-  "url": "MishkenotechaYisrael_v1.8.47_20261026_1227.mishupdate",
-  "sha256": "35c299d38068eb6bac8efaf951dacb513b847440c79a2fd24529f89c2542cdb2",
-  "size": 18987494,
-  "created_at": "2026-10-26 12:28:04"
+  "version": "1.8.48-studio-20261027_1606",
+  "description": "עימוד ספר — סטודיו לעיצוב חופשי של שער הספר: להזיז כל דבר לכל מקום, להגדיל ולסובב, תמונות, צורות, קווים, קישוטים, צבעים ושכבות. ועוד 6 גופנים חדשים לכותרות.",
+  "url": "MishkenotechaYisrael_v1.8.48_20261027_1606.mishupdate",
+  "sha256": "6bdc0e3a2b26274a812448e88c61a01d7c9e926ceae2bfe2799c63a010f2ef69",
+  "size": 19553291,
+  "created_at": "2026-10-27 16:07:00"
 }
