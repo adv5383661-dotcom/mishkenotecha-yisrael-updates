@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.8.52-title-studio-20261028_1156",
-  "description": "עימוד ספר — דף אחד ברור לשער הספר עם כל הדוגמאות גדולות, כפתור בטל שעובד, עיצוב חופשי כמו סטודיו גרפי (הגדלה, שכבות, הסתרה ונעילה), וכמאתיים קישוטים.",
-  "url": "MishkenotechaYisrael_v1.8.52_20261028_1156.mishupdate",
-  "sha256": "4bfba713f587b8193b01a78c89d51358acab5d39a158322a20a223ec63fdcd4c",
-  "size": 19807166,
-  "created_at": "2026-10-28 11:56:25"
+  "version": "1.8.53-keep-title-20261028_1202",
+  "description": "עימוד ספר — תיקון: השער שכבר נבחר נשמר. לחיצה על \"לשנות את הכתוב\" כבר לא מחליפה אותו בשער פשוט.",
+  "url": "MishkenotechaYisrael_v1.8.53_20261028_1202.mishupdate",
+  "sha256": "ccbaf98b31f315514280dc2898a3d6b4fc502acd3bbd5fe64a1b6df4cfd80470",
+  "size": 19807574,
+  "created_at": "2026-10-28 12:02:17"
 }
