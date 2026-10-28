@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.8.56-title-words-20261028_1214",
-  "description": "עימוד ספר — \"משנים את הכתוב\" עובד בכל שער: טופס פשוט לשם הספר, המחבר, המקום, השנה וכל שורה בשער, והשער מתעדכן מיד.",
-  "url": "MishkenotechaYisrael_v1.8.56_20261028_1214.mishupdate",
-  "sha256": "ccc26a0a033bb666bf5f32c91938139ee1aa51aec4d7262bfae1821f7d508526",
-  "size": 19808766,
-  "created_at": "2026-10-28 12:15:04"
+  "version": "1.8.57-title-parts-20261028_1229",
+  "description": "עימוד ספר — בעיצוב החופשי אפשר לשחק בכל חלק של השער: רקע, מסגרת ועמודים, לוח וקישוט — להזיז, להגדיל, להסתיר ולהוסיף. והדף גדול יותר במחשב נייד קטן.",
+  "url": "MishkenotechaYisrael_v1.8.57_20261028_1229.mishupdate",
+  "sha256": "51d34b1469b58f472580c9e64e3ac30abb55c8ceebb9e8b3bdf1781257db39db",
+  "size": 19810915,
+  "created_at": "2026-10-28 12:29:50"
 }
