@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.8.54-title-wizard-20261028_1204",
-  "description": "עימוד ספר — סטודיו שער הספר בחלון מלא משלו, כאשף בשלבים: בוחרים שער, משנים את הכתוב, עיצוב חופשי, וחזרה לספר.",
-  "url": "MishkenotechaYisrael_v1.8.54_20261028_1204.mishupdate",
-  "sha256": "b7a77c8e15b8cd19e400bdea0adcb993071db8297ac8fa93f86e3029a0f400c9",
-  "size": 19807686,
-  "created_at": "2026-10-28 12:04:49"
+  "version": "1.8.55-light-studio-20261028_1207",
+  "description": "עימוד ספר — סטודיו שער הספר בעיצוב בהיר ונעים במקום השחור.",
+  "url": "MishkenotechaYisrael_v1.8.55_20261028_1207.mishupdate",
+  "sha256": "6cb2c9e087f8ba849c61d6a92424cd314a1690d6566c0578ee838e733b9cd392",
+  "size": 19807451,
+  "created_at": "2026-10-28 12:07:38"
 }
