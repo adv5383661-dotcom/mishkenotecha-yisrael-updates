@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.8.51-otzar-gates-20261027_2028",
-  "description": "עימוד ספר — 7 שערים חדשים ברמה של אוצר החכמה: עמודי שיש עם כרכוב, פרוכת עם גדילים, מסגרת כסף מדורגת על שיש, וקשת מרופדת עם חבל שזור ועיטור עלים.",
-  "url": "MishkenotechaYisrael_v1.8.51_20261027_2028.mishupdate",
-  "sha256": "77642eea3636afab65eb583eaa1f7f64abb6a9a09e4d3a75cab8b8e59d9993b6",
-  "size": 19804556,
-  "created_at": "2026-10-27 20:29:01"
+  "version": "1.8.52-title-studio-20261028_1156",
+  "description": "עימוד ספר — דף אחד ברור לשער הספר עם כל הדוגמאות גדולות, כפתור בטל שעובד, עיצוב חופשי כמו סטודיו גרפי (הגדלה, שכבות, הסתרה ונעילה), וכמאתיים קישוטים.",
+  "url": "MishkenotechaYisrael_v1.8.52_20261028_1156.mishupdate",
+  "sha256": "4bfba713f587b8193b01a78c89d51358acab5d39a158322a20a223ec63fdcd4c",
+  "size": 19807166,
+  "created_at": "2026-10-28 11:56:25"
 }
