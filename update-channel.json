@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.8.79-indent-follows-style-20261101_1632",
-  "description": "עימוד ספר — תיקון: \"גודל ההזחה\" בלשונית סגנונות לא מוסיף יותר הזחת שורה ראשונה כשבחרו רווח קטן, צמודות או הזחת שורה שנייה.",
-  "url": "MishkenotechaYisrael_v1.8.79_20261101_1632.mishupdate",
-  "sha256": "aee7b48181a92027aa68b28434e3c08e4b693c1ac50f268ccd88531575abe5ab",
-  "size": 16916050,
-  "created_at": "2026-11-01 16:32:58"
+  "version": "1.8.81-quote-inline-20261101_1645",
+  "description": "עימוד ספר — הגדרה לכל הספר מה פסקה ומה ציטוט, והציטוט יכול להיות חלק מהקטע (לא קטע נפרד); סגנון \"ציטוט מפסוק\" לספרים על התורה.",
+  "url": "MishkenotechaYisrael_v1.8.81_20261101_1645.mishupdate",
+  "sha256": "d16d5dbfd721fb8a7862bcfd5b53a2ba1acb729bdc7dcc7bbd194ea3da57b339",
+  "size": 16919415,
+  "created_at": "2026-11-01 16:46:06"
 }
