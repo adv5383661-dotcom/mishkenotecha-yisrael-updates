@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.8.78-accessible-layout-20261101_1505",
-  "description": "עימוד ספר — מסך פשוט יותר: לשונית עיצוב בשלושה חלקים (רק אחד פתוח), ההודעות למטה, כפתור \"עמוד בספר\" גדול, סגנונות ברשימה, וחיפוש ותצוגת עמודים עברו לתפריט.",
-  "url": "MishkenotechaYisrael_v1.8.78_20261101_1505.mishupdate",
-  "sha256": "e44caa9fb65b68298f7f7dd2a82f20c898ef5e14e99f437d29ac24bc8ddf9bd2",
-  "size": 16915884,
-  "created_at": "2026-11-01 15:05:20"
+  "version": "1.8.79-indent-follows-style-20261101_1632",
+  "description": "עימוד ספר — תיקון: \"גודל ההזחה\" בלשונית סגנונות לא מוסיף יותר הזחת שורה ראשונה כשבחרו רווח קטן, צמודות או הזחת שורה שנייה.",
+  "url": "MishkenotechaYisrael_v1.8.79_20261101_1632.mishupdate",
+  "sha256": "aee7b48181a92027aa68b28434e3c08e4b693c1ac50f268ccd88531575abe5ab",
+  "size": 16916050,
+  "created_at": "2026-11-01 16:32:58"
 }
