@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.8.81-quote-inline-20261101_1645",
-  "description": "עימוד ספר — הגדרה לכל הספר מה פסקה ומה ציטוט, והציטוט יכול להיות חלק מהקטע (לא קטע נפרד); סגנון \"ציטוט מפסוק\" לספרים על התורה.",
-  "url": "MishkenotechaYisrael_v1.8.81_20261101_1645.mishupdate",
-  "sha256": "d16d5dbfd721fb8a7862bcfd5b53a2ba1acb729bdc7dcc7bbd194ea3da57b339",
-  "size": 16919415,
-  "created_at": "2026-11-01 16:46:06"
+  "version": "1.8.82-dibur-marks-20261101_1748",
+  "description": "עימוד ספר — דיבור המתחיל עד הסימן שבוחרים (מקף, נקודה, חצי סוגר מרובע ] ועוד, גם כמה יחד), ואפשר לקבוע שהוא ציטוט מפסוק; תפריט ☰ אפשרויות נוספות כבר לא נחתך במסך קטן, ו-💬 דיווח על תקלה למעלה.",
+  "url": "MishkenotechaYisrael_v1.8.82_20261101_1748.mishupdate",
+  "sha256": "c9d7c9e80b4fe6995b0e3226112edf4b73722e1b3add36f6b66e7b9e1f4bdcd4",
+  "size": 16923152,
+  "created_at": "2026-11-01 17:48:42"
 }
