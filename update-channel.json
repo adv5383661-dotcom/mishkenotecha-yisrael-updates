@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.8.76-spell-dictate-20261101_1443",
-  "description": "עימוד ספר — בדיקת איות לפי מילון של ספרי הקודש (מאוצר החכמה), עם הצעות תיקון בלחיצה. והכנה להכתבה בקול (הכפתור יופיע כשהשרת יופעל).",
-  "url": "MishkenotechaYisrael_v1.8.76_20261101_1443.mishupdate",
-  "sha256": "dbee5c19b467d9c6277d951c6c29561dd617dd69caaa728304683a1d219dabdc",
-  "size": 16911685,
-  "created_at": "2026-11-01 14:43:23"
+  "version": "1.8.77-screen-colours-20261101_1456",
+  "description": "עימוד ספר — \"צבעי המסך\" בתפריט: חמישה מראות לבחירה (כמו היום, ניגודיות גבוהה, קרם חם, כהה, ירוק רגוע). לחיצה אחת, נשמר. דפי הספר עצמם לא משתנים.",
+  "url": "MishkenotechaYisrael_v1.8.77_20261101_1456.mishupdate",
+  "sha256": "98390646ddb94da507aedc42d235ecf30206b1f700e0a4efb47887e64ed81643",
+  "size": 16913980,
+  "created_at": "2026-11-01 14:56:39"
 }
