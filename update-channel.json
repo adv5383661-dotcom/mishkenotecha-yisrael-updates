@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.8.65-hang-letter-20261101_1210",
-  "description": "עימוד ספר — שתי הגדרות חדשות בלשונית העיצוב: \"הזחת שורה שנייה (כמו בספרים)\" ו\"אות ראשונה גדולה\" בכל פסקה.",
-  "url": "MishkenotechaYisrael_v1.8.65_20261101_1210.mishupdate",
-  "sha256": "afacc0cce2b58ad316d72646f9cec549ae28b009ca159df407e83a6a313a5a41",
-  "size": 16097161,
-  "created_at": "2026-11-01 12:10:44"
+  "version": "1.8.66-paras-back-20261101_1216",
+  "description": "עימוד ספר — תיקון: אחרי \"בלי חלוקה\" הספר הפך לגוש אחד וההזחות לא עבדו. עכשיו כל הגדרת פסקה (הזחה, אות גדולה, חלון) מחזירה את החלוקה לפסקאות לבד.",
+  "url": "MishkenotechaYisrael_v1.8.66_20261101_1216.mishupdate",
+  "sha256": "f79705918306acddeba0e63d630632361c63a0bc6e8e121ef40c3fff617bd26a",
+  "size": 16097006,
+  "created_at": "2026-11-01 12:16:25"
 }
