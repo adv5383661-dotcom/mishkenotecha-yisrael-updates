@@ -109,6 +109,17 @@
     "ornaments.json": "b60035c00df6f9f3ec4820c2e2f1b8d2f318fec094ef425ee887c7e57e579a8d",
     "spell.txt": "50ff3ec5b6583e94854292132a2527928151e612dc5d8e214d44e7b0775e75e6"
    }
+  },
+  {
+   "version": "20261104_231958",
+   "api": 1,
+   "published": "2026-11-04 23:19",
+   "files": {
+    "book.js": "928ffc98959d15d289296f3b75217cfeac5acc272d86fccf2d525cf0531e81b8",
+    "book.css": "cc1f328e406556f84efd9f90af6de9020538ca01abd750485a88ee60cf9c3835",
+    "ornaments.json": "b60035c00df6f9f3ec4820c2e2f1b8d2f318fec094ef425ee887c7e57e579a8d",
+    "spell.txt": "50ff3ec5b6583e94854292132a2527928151e612dc5d8e214d44e7b0775e75e6"
+   }
   }
  ]
 }
