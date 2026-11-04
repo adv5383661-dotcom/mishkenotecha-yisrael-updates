@@ -1,10 +1,10 @@
 {
- "version": "20261104_201830",
+ "version": "20261104_225559",
  "api": 1,
- "published": "2026-11-04 20:18",
+ "published": "2026-11-04 22:55",
  "files": {
-  "book.js": "6c6b7ace8a8d882cb8a6694466bf38e9a4d9ece8b67939546f7a124ed667ef75",
-  "book.css": "1d5f505224d52887bf014bb65ace6b40ac9415d7a752072e7c254953b34d9dde",
+  "book.js": "fa48984770dc4ee76ce74f229133371efb3268f4be49169fdeaea0747edec2bb",
+  "book.css": "cc1f328e406556f84efd9f90af6de9020538ca01abd750485a88ee60cf9c3835",
   "ornaments.json": "b60035c00df6f9f3ec4820c2e2f1b8d2f318fec094ef425ee887c7e57e579a8d",
   "spell.txt": "50ff3ec5b6583e94854292132a2527928151e612dc5d8e214d44e7b0775e75e6"
  }
