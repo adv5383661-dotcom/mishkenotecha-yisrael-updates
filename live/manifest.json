@@ -1,9 +1,9 @@
 {
- "version": "20261104_123123",
+ "version": "20261104_174825",
  "api": 1,
- "published": "2026-11-04 12:31",
+ "published": "2026-11-04 17:48",
  "files": {
-  "book.js": "edef2304f086685629556e7642dfeb932ef2f1bcee17093c7d25a4c19a49aff7",
+  "book.js": "df00cdb16361e3a571cc0db743c8ca09e66b0880f34f95727166cc56d566cfe7",
   "book.css": "6dc71a99ea5d8697bd0eac10dc9bf3ef01e048c00be3b7503e4753c564f28914",
   "ornaments.json": "b60035c00df6f9f3ec4820c2e2f1b8d2f318fec094ef425ee887c7e57e579a8d",
   "spell.txt": "50ff3ec5b6583e94854292132a2527928151e612dc5d8e214d44e7b0775e75e6"
