@@ -1,0 +1,5 @@
+{
+ "checked_at": "2026-11-07 23:39",
+ "note": "= live 20261107_230003 + 6 short-page edits (book.js now byte-identical to src/book_studio_js.txt): parasha at page top again, gentle push. Abba's book: every parasha at page top, running heads OK; rib_behaviour + column_bottoms PASS on src; qa_ornament_removal fails identically on unmodified 230003 (pre-existing)",
+ "base": "20261107_230003"
+}
