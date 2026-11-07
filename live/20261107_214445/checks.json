@@ -1,0 +1,5 @@
+{
+ "checked_at": null,
+ "note": "Eli 11-07: no release checks on request; = bundled 1.9.06 screens + centred zevach title (zero-width page number) + nearly-empty page rule + new design setting headPull (קירוב שני חלקי שם הספר, default 3mm)",
+ "base": "v1.9.06 bundled"
+}
