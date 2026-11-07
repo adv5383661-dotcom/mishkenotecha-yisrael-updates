@@ -1,0 +1,5 @@
+{
+ "checked_at": "2026-11-07 22:20",
+ "note": "= bundled 1.9.07 screens + headPull default moved from renderDesign (silent write broke undo) to DEFAULT_STYLE; tools/qa_ornament_removal.py all PASS on this exact book.js",
+ "base": "v1.9.07 bundled"
+}
