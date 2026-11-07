@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "1.9.06-layout-20261107_2125",
-  "description": "עימוד ספרים: עריכה ישירה בעמוד, שליטה בעיטורים, שיפור שבירת עמודים ובדיקת הגהה לפני ייצוא.",
-  "created_at": "2026-11-07 21:25:53",
-  "url": "MishkenotechaYisrael_v1.9.06-layout-20261107_2125.mishupdate",
-  "sha256": "dad06520fa871a4d655444387993fb7a52c5a02e60f102f20ce4b7b87ee7eeda",
-  "size": 17283446
+  "version": "1.9.07-report-20261107_2214",
+  "description": "דיווח תקלה: אפשר להדביק תמונה ולהקליט את המסך; עימוד: עמוד כמעט ריק לפני פרשה חדשה, מספר עמוד בשורת הכותרת, כותרת בודדת בעמוד.",
+  "created_at": "2026-11-07 22:14:01",
+  "url": "MishkenotechaYisrael_v1.9.07-report-20261107_2214.mishupdate",
+  "sha256": "3a3eb65b5d9b26800d0f428f1433c7a5baa4f02c8c01971bfcaf94fdfbf2bca5",
+  "size": 17290121
 }
