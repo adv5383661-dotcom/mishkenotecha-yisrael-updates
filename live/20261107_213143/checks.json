@@ -1,0 +1,5 @@
+{
+ "checked_at": null,
+ "note": "Eli 11-07: published WITHOUT release checks on request; book.js = live 20261105_122352 + page-number fixes only (TEMPLATE_BASE design reset, zevach number on head baseline, chapter-opening keeps number on top)",
+ "base": "20261105_122352"
+}
