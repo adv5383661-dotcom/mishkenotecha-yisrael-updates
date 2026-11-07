@@ -1,0 +1,5 @@
+{
+ "checked_at": "2026-11-07 22:28",
+ "note": "= 20261107_222050 + chapter always starts at page top again (nearlyEmpty rule removed) + settleShortPages can push up to +7% (gaps scale x10), styled paragraphs take part, vFill skips tuned pages. Abba's book: no page under 1/3 before a parasha; qa_ornament_removal all PASS",
+ "base": "20261107_222050"
+}
