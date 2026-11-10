@@ -1,10 +1,10 @@
 {
   "app_id": "MishkenotechaYisrael",
   "kind": "overlay",
-  "version": "2.0.0-studio2-20261110_1148",
+  "version": "2.0.0-studio2-20261110_1213",
   "description": "משכנותיך ישראל, הגרסה החדשה: לכל הגדרה מקום אחד, תיקוני עיטורים, תוכן עניינים, חוברת, ניקוי עיצוב, מספרי עמודים וייבוא טקסט.",
-  "created_at": "2026-11-10 11:48:26",
-  "url": "MishkenotechaYisrael_v2.0.0-studio2-20261110_1148.mishupdate",
-  "sha256": "67f164dce2d570eb492ebda17f35a37e0a6a3928513c8d11a28c7b03de7e2d0c",
-  "size": 18936811
+  "created_at": "2026-11-10 12:13:48",
+  "url": "MishkenotechaYisrael_v2.0.0-studio2-20261110_1213.mishupdate",
+  "sha256": "a6247fb215e75af495ef8476a91d50249d79feebb8a264083f6c73e310c96daf",
+  "size": 18936796
 }
